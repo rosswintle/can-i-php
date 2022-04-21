@@ -26,8 +26,8 @@ const features = [
         removed: null,
         resources: [
             {
-                name: 'Enums',
-                url: 'https://stitcher.io/blog/php-enums'
+                name: 'Array unpacking with string keys',
+                url: ''
             }
         ]
     },
@@ -42,8 +42,56 @@ const features = [
         removed: null,
         resources: [
             {
-                name: 'Enums',
-                url: 'https://stitcher.io/blog/php-enums'
+                name: 'Array unpacking',
+                url: ''
+            }
+        ]
+    },
+    {
+        name: 'Shorthand Ternary (?:)',
+        description: 'Use of <code>?:</code> - actually added in PHP v5.3!',
+        keywords: [
+            'short', 'shorthand', 'ternary', 'conditional', 'operators'
+        ],
+        added: '5.6',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Shorthand ternary (stitcher.io)',
+                url: 'https://stitcher.io/blog/shorthand-comparisons-in-php#shorthand-ternary-operator'
+            }
+        ]
+    },
+    {
+        name: 'Null coalescing operator',
+        description: 'Use <code>??</code>',
+        keywords: [
+            'short', 'shorthand', 'null', 'conditional', 'operators'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Null coalescing operator (php.net)',
+                url: 'https://www.php.net/manual/en/language.operators.comparison.php#language.operators.comparison.coalesce'
+            }
+        ]
+    },
+    {
+        name: 'Spaceship operator',
+        description: 'Use <code><=></code> for comparisons for sorting',
+        keywords: [
+            'short', 'shorthand', 'spaceship', 'comparisons', 'operators', 'sorting'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Spaceship operator (stitcher.io)',
+                url: 'https://stitcher.io/blog/shorthand-comparisons-in-php#spaceship-operator'
             }
         ]
     },

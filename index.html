@@ -30,11 +30,39 @@
 
             <div class="text-left">
                 <template x-for="feature in filteredFeatures">
-                    <article class="w-full mb-6">
+                    <!-- Feature panel -->
+                    <div class="w-full mb-6">
+                        <!-- Feature info -->
                         <div class="w-full border border-b-none py-2 px-4">
                             <h2 x-text="feature.name" class="text-lg mb-4 font-bold"></h2>
-                            <p x-html="feature.description"></p>
+                            <div class="flex">
+                                <!-- Feature top panel, left column -->
+                                <div class="w-3/4 pr-4">
+                                    <p x-html="feature.description" class="mb-6"></p>
+                                    <h3 class="font-bold text-l">Resources</h3>
+                                    <ul x-show="feature?.resources?.length > 0" class="list-disc list-inside text-sm">
+                                        <template x-for="resource in feature.resources">
+                                            <li>
+                                                <a x-text="resource.name" class="underline hover:no-underline" :href="resource.url"></a>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                                <div class="w-1/4 pl-4">
+                                    <p x-show="feature.added">
+                                        Added: PHP v<span x-text="feature.added"></span>
+                                    </p>
+                                    <p x-show="feature.deprecated">
+                                        Deprecated: PHP v<span x-text="feature.deprecated"></span>
+                                    </p>
+                                    <p x-show="feature.removed">
+                                        Removed: PHP v<span x-text="feature.removed"></span>
+                                    </p>
+
+                                </div>
+                            </div>
                         </div>
+                        <!-- Feature versions - colored boxes -->
                         <div class="flex w-full">
                             <template x-for="version in versions">
                                 <div class="flex-1 px-3 py-2 text-center" :class="featureSupportedIn(feature, version.version) ? 'bg-green-300 font-bold' : 'bg-red-300'">
