@@ -8,7 +8,7 @@
     <link href="/dist/style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="app" class="text-center py-8 px-6">
+    <div id="app" x-data="features" class="text-center py-8 px-6">
         <header class="mb-12">
             <div class="mb-4"><strong>Unofficial</strong> and <em>incomplete</em></div>
             <h1 class="text-6xl tracking-wider font-bold">Can I PHP?</h1>
@@ -20,12 +20,50 @@
                     type="search"
                     name="search"
                     placeholder="Search for a PHP feature"
-                    class="mb-4 text-4xl py-4 px-6 border-2 rounded-md">
+                    class="mb-4 text-4xl py-4 px-6 border-2 rounded-md"
+                    @input="filterFeatures">
             </form>
+
+            <div>
+                <template x-for="feature in filteredFeatures">
+                    <h2 x-text="feature.name"></h2>
+                </template>
+            </div>
         </main>
     </div>
     <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://polished-thirtyfive.caniphp.com/script.js" data-site="IULNCQBS" defer></script>
     <!-- / Fathom -->
+
+    <script src="versions.js"></script>
+    <script src="features.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('features', () => {
+                return {
+
+                    filteredFeatures: features,
+
+                    filterFeatures(e) {
+                        this.filteredFeatures = this.featuresHaving(e.target.value);
+                    },
+
+                    featureMatches(feature, keyword) {
+                        keyword = keyword.toLowerCase();
+                        return feature.name.toLowerCase().includes(keyword) ||
+                            feature.description.toLowerCase().includes(keyword) ||
+                            feature.keywords.some(featureKeyword => featureKeyword.toLowerCase().includes(keyword));
+                    },
+
+                    featuresHaving(featureKeyword) {
+                        const versions = features.filter(feature => this.featureMatches(feature, featureKeyword));
+                        return versions;
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

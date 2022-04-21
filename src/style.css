@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-blue-light: #8892BF;
+    --color-blue-dark: #4F5B93;
+    --font: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
