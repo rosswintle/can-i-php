@@ -1,0 +1,22 @@
+{
+  "name": "can-i-php",
+  "version": "1.0.0",
+  "description": "Can I Use for PHP",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosswintle/can-i-php.git"
+  },
+  "author": "Ross Wintle",
+  "license": "SEE LICENSE IN CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rosswintle/can-i-php/issues"
+  },
+  "homepage": "https://github.com/rosswintle/can-i-php#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
