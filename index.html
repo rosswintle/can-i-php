@@ -8,7 +8,7 @@
     <link href="/dist/style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="app" x-data="features" class="text-center py-8 px-6">
+    <div id="app" x-data="features" class="text-center py-8 px-6 md:w-2/3 max-w-4xl mx-auto">
         <header class="mb-12">
             <div class="mb-4"><strong>Unofficial</strong> and <em>incomplete</em></div>
             <h1 class="text-6xl tracking-wider font-bold">Can I PHP?</h1>
@@ -20,13 +20,23 @@
                     type="search"
                     name="search"
                     placeholder="Search for a PHP feature"
-                    class="mb-4 text-4xl py-4 px-6 border-2 rounded-md"
+                    class="w-2/3 mb-16 text-3xl py-4 px-6 border-2 rounded-md"
                     @input="filterFeatures">
             </form>
 
-            <div>
+            <div class="text-left">
                 <template x-for="feature in filteredFeatures">
-                    <h2 x-text="feature.name"></h2>
+                    <article class="w-full mb-2 border pt-2 px-4">
+                        <h2 x-text="feature.name" class="text-lg mb-4 font-bold"></h2>
+                        <p x-text="feature.description"></p>
+                        <div class="flex">
+                            <template x-for="version in versions">
+                                <div class="px-3 py-2 text-center">
+                                    <span x-text="version.version"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </article>
                 </template>
             </div>
         </main>
@@ -45,6 +55,8 @@
                 return {
 
                     filteredFeatures: features,
+
+                    versions: versions,
 
                     filterFeatures(e) {
                         this.filteredFeatures = this.featuresHaving(e.target.value);
