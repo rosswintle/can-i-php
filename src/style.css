@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+code {
+    font-family:'Courier New', Courier, monospace;
+    @apply py-1 px-2 bg-gray-200;
+}
+
 :root {
     --color-blue-light: #8892BF;
     --color-blue-dark: #4F5B93;

@@ -26,12 +26,14 @@
 
             <div class="text-left">
                 <template x-for="feature in filteredFeatures">
-                    <article class="w-full mb-2 border pt-2 px-4">
-                        <h2 x-text="feature.name" class="text-lg mb-4 font-bold"></h2>
-                        <p x-text="feature.description"></p>
-                        <div class="flex">
+                    <article class="w-full mb-6">
+                        <div class="w-full border border-b-none py-2 px-4">
+                            <h2 x-text="feature.name" class="text-lg mb-4 font-bold"></h2>
+                            <p x-html="feature.description"></p>
+                        </div>
+                        <div class="flex w-full">
                             <template x-for="version in versions">
-                                <div class="px-3 py-2 text-center">
+                                <div class="flex-1 px-3 py-2 text-center" :class="featureSupportedIn(feature, version.version) ? 'bg-green-300' : 'bg-red-300'">
                                     <span x-text="version.version"></span>
                                 </div>
                             </template>
@@ -57,6 +59,50 @@
                     filteredFeatures: features,
 
                     versions: versions,
+
+                    versionCompare(v1, v2) {
+                        if (v1 === v2) {
+                            return 0;
+                        }
+
+                        const v1parts = v1.split('.')
+                        const v2parts = v2.split('.')
+
+                        if (v1parts[0] > v2parts[0]) {
+                            return 1
+                        }
+
+                        if (v1parts[0] < v2parts[0]) {
+                            return -1
+                        }
+
+                        return (v1parts[1] > v2parts[1]) ? 1 : -1;
+                    },
+
+                    featureSupportedIn(feature, version) {
+                        // Can't tell if feature is added
+                        if (feature.added === null) {
+                            return false;
+                        }
+
+                        // Feature is not yet added in this version
+                        if (this.versionCompare(feature.added, version) === 1) {
+                            return false;
+                        }
+
+                        // Feature is added, removal is not specified
+                        if (feature.removed === null) {
+                            return true;
+                        }
+
+                        // Feature is removed
+                        if (this.versionCompare(feature.removed, version) <= 0) {
+                            return false;
+                        }
+
+                        // Feature is added and not removed
+                        return true;
+                    },
 
                     filterFeatures(e) {
                         this.filteredFeatures = this.featuresHaving(e.target.value);
