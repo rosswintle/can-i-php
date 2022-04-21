@@ -489,6 +489,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -561,6 +565,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -584,12 +596,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .filter {
@@ -610,6 +642,11 @@ code {
   --color-blue-light: #8892BF;
   --color-blue-dark: #4F5B93;
   --font: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.hover\:no-underline:hover {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 @media (min-width: 768px) {

@@ -8,11 +8,15 @@
     <link href="/dist/style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="app" x-data="features" class="text-center py-8 px-6 md:w-2/3 max-w-4xl mx-auto">
+    <div id="app" x-data="features" class="text-center pt-6 pb-24 px-6 md:w-2/3 max-w-4xl mx-auto">
         <header class="mb-12">
-            <div class="mb-4"><strong>Unofficial</strong> and <em>incomplete</em></div>
+            <div class="mb-14 text-sm">
+                By <a class="underline hover:no-underline" href="https://twitter.com/magicroundabout">@magicroundabout</a> &mdash;
+                <a class="underline hover:no-underline" href="https://github.com/rosswintle/can-i-php">Github</a> &mdash;
+                <a class="underline hover:no-underline" href="https://ko-fi.com/magicroundabout">Buy me coffee</a>
+            </div>
+            <div class="mb-4 text-2xl"><strong>Unofficial</strong> and <em>incomplete</em></div>
             <h1 class="text-6xl tracking-wider font-bold">Can I PHP?</h1>
-            <p>Not yet!</p>
         </header>
         <main>
             <form action="">
@@ -33,7 +37,7 @@
                         </div>
                         <div class="flex w-full">
                             <template x-for="version in versions">
-                                <div class="flex-1 px-3 py-2 text-center" :class="featureSupportedIn(feature, version.version) ? 'bg-green-300' : 'bg-red-300'">
+                                <div class="flex-1 px-3 py-2 text-center" :class="featureSupportedIn(feature, version.version) ? 'bg-green-300 font-bold' : 'bg-red-300'">
                                     <span x-text="version.version"></span>
                                 </div>
                             </template>
