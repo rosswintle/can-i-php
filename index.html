@@ -85,6 +85,8 @@
 
     <script>
         document.addEventListener('alpine:init', () => {
+            document.querySelector('input[name=search]').focus();
+
             Alpine.data('features', () => {
                 return {
 
