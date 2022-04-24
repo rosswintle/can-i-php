@@ -49,7 +49,7 @@ const features = [
     },
     {
         name: 'never type',
-        description: '`never` is a return type indicating the function does not return.',
+        description: '<code>never</code> is a return type indicating the function does not return.',
         keywords: [
             'types', 'typehints', 'return'
         ],
@@ -65,7 +65,7 @@ const features = [
     },
     {
         name: 'new in initializers',
-        description: 'Use `new` expressions inside parameter default values, attribute arguments, static variable initializers and global constant initializers.',
+        description: 'Use <code>new</code> expressions inside parameter default values, attribute arguments, static variable initializers and global constant initializers.',
         keywords: [
             'new', 'objects'
         ],
@@ -129,7 +129,7 @@ const features = [
     },
     {
         name: 'match expression',
-        description: '`match` is like `switch`, but returns a value.',
+        description: '<code>match</code> is like <code>switch</code>, but returns a value.',
         keywords: [
             'control', 'structures', 'switch', 'conditionals'
         ],
@@ -161,7 +161,7 @@ const features = [
     },
     {
         name: 'Nullsafe operator',
-        description: 'Nullsafe operator allows you to access properties and methods of nullable objects. e.g. `$country = $session?->user?->getAddress()?->country;`',
+        description: 'Nullsafe operator allows you to access properties and methods of nullable objects. e.g. <code>$country = $session?->user?->getAddress()?->country;</code>',
         keywords: [
             'null'
         ],
@@ -241,7 +241,7 @@ const features = [
     },
     {
         name: 'Arrow functions',
-        description: 'Arrow functions are a shorthand for anonymous functions: `fn (argument_list) => expr`.',
+        description: 'Arrow functions are a shorthand for anonymous functions: <code>fn (argument_list) => expr</code>.',
         keywords: [
             'closures', 'anonymous', 'shorthand', 'short'
         ],
