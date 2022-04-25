@@ -529,6 +529,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   list-style-type: disc;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .rounded-md {
   border-radius: 0.375rem;
 }
