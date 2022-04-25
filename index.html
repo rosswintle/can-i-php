@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <!-- Feature versions - colored boxes -->
-                        <div class="flex w-full">
+                        <div class="flex w-full overflow-auto">
                             <template x-for="version in versions">
                                 <div class="flex-1 px-3 py-2 text-center" :class="featureSupportedIn(feature, version.version) ? 'bg-green-300 font-bold' : 'bg-red-300'">
                                     <span x-text="version.version"></span>
