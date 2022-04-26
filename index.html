@@ -15,13 +15,14 @@
     <div id="app" x-data="features" class="text-center pt-6 pb-24 px-6 md:w-2/3 max-w-4xl mx-auto">
         <header class="mb-12">
             <div class="mb-14 text-sm">
-                By <a class="underline hover:no-underline" href="https://twitter.com/magicroundabout">@magicroundabout</a> &mdash;
                 <a class="underline hover:no-underline" href="https://github.com/rosswintle/can-i-php">Github</a> &mdash;
+                By <a class="underline hover:no-underline" href="https://twitter.com/magicroundabout">@magicroundabout</a> &mdash;
                 <a class="underline hover:no-underline" href="https://ko-fi.com/magicroundabout">Buy me coffee</a> OR
                 <a class="underline hover:no-underline" href="https://turbo-admin.com">Check out my WordPress Browser Extension</a>
             </div>
             <div class="mb-4 text-2xl"><strong>Unofficial</strong> and <em>incomplete</em></div>
-            <h1 class="text-6xl tracking-wider font-bold">Can I PHP?</h1>
+            <h1 class="text-6xl tracking-wider font-bold mb-3">Can I PHP?</h1>
+            <p>PHP feature support by version - like caniuse.com but for PHP</p>
         </header>
         <main>
             <form action="">
@@ -29,7 +30,7 @@
                     type="search"
                     name="search"
                     placeholder="Search for a PHP feature"
-                    class="w-2/3 mb-16 text-3xl py-4 px-6 border-2 rounded-md"
+                    class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
                     @input="filterFeatures">
             </form>
 
@@ -44,8 +45,8 @@
                                 <!-- Feature top panel, left column -->
                                 <div class="w-3/4 pr-4">
                                     <p x-html="feature.description" class="mb-6"></p>
-                                    <h3 class="font-bold text-l">Resources</h3>
-                                    <ul x-show="feature?.resources?.length > 0" class="list-disc list-inside text-sm">
+                                    <h3 class="font-bold text-l mb-2">Resources</h3>
+                                    <ul x-show="feature?.resources?.length > 0" class="list-disc list-inside text-sm mb-4">
                                         <template x-for="resource in feature.resources">
                                             <li>
                                                 <a x-text="resource.name" class="underline hover:no-underline" :href="resource.url"></a>
