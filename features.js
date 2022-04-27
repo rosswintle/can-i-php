@@ -127,7 +127,7 @@ const features = [
         resources: [
             {
                 name: 'Union types (php.net)',
-                url: 'https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.union'
+                url: 'https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.composite.union'
             }
         ]
     },
