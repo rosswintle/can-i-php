@@ -96,6 +96,26 @@ const features = [
         ]
     },
     {
+        name: 'Intersection types',
+        description: 'An intersection type declaration enforces that a value must belong to all of the declared types.',
+        keywords: [
+            'types', 'typehints', 'declarations'
+        ],
+        added: '8.1',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Intersection types (php.net)',
+                url: 'https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.composite.intersection'
+            },
+            {
+                name: 'Intersection types (PHP.Watch)',
+                url: 'https://php.watch/versions/8.1/intersection-types'
+            }
+        ]
+    },
+    {
         name: 'Union types',
         description: 'A union type declaration accepts values of multiple different simple types, rather than a single one.',
         keywords: [
