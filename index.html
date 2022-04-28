@@ -25,11 +25,11 @@
             <p>PHP feature support by version - like caniuse.com but for PHP</p>
         </header>
         <main>
-            <form action="">
+            <form action="" @submit.prevent="">
                 <input
                     x-model="searchString"
                     type="search"
-                    name="search"
+                    name="s"
                     placeholder="Search for a PHP feature"
                     class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
                     >
@@ -92,13 +92,26 @@
 
     <script>
         document.addEventListener('alpine:init', () => {
-            document.querySelector('input[name=search]').focus();
+            document.querySelector('input[name=s]').focus();
+
+            const url = new URL(window.location.href);
+
+            const searchParam = url.searchParams.get('s');
 
             Alpine.data('features', () => {
                 return {
-                    searchString: window.location.pathname.slice(1) ?? '',
+                    // searchString: window.location.pathname.slice(1) ?? '',
+                    searchString: searchParam ?? '',
 
                     versions: versions,
+
+                    init() {
+                        this.$watch('searchString', value => {
+                            const url = new URL(window.location.href);
+                            url.searchParams.set('s', value);
+                            history.replaceState(null, '', url);
+                        } );
+                    },
 
                     versionCompare(v1, v2) {
                         if (v1 === v2) {
