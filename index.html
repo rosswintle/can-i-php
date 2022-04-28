@@ -27,11 +27,12 @@
         <main>
             <form action="">
                 <input
+                    x-model="searchString"
                     type="search"
                     name="search"
                     placeholder="Search for a PHP feature"
                     class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
-                    @input="filterFeatures">
+                    >
             </form>
 
             <div class="text-left">
@@ -95,10 +96,16 @@
 
             Alpine.data('features', () => {
                 return {
+                    searchString: window.location.pathname.slice(1) ?? '',
 
                     filteredFeatures: features,
 
                     versions: versions,
+
+                    init() {
+                        this.filterFeatures();
+                        this.$watch('searchString', this.filterFeatures.bind(this));
+                    },
 
                     versionCompare(v1, v2) {
                         if (v1 === v2) {
@@ -145,7 +152,7 @@
                     },
 
                     filterFeatures(e) {
-                        this.filteredFeatures = this.featuresHaving(e.target.value);
+                        this.filteredFeatures = this.featuresHaving(this.searchString);
                     },
 
                     featureMatches(feature, keyword) {
