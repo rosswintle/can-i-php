@@ -275,7 +275,7 @@ const features = [
         resources: [
             {
                 name: 'Typed arguments for functions',
-                url: 'https://www.php.net/manual/en/functions.arguments.php#example-167'
+                url: 'https://www.php.net/ChangeLog-5.php'
             }
         ]
     },
@@ -290,9 +290,13 @@ const features = [
         removed: null,
         resources: [
             {
-                name: 'Typed arguments for functions',
-                url: 'https://www.php.net/manual/en/functions.arguments.php#example-167'
-            }
+                name: 'Function arguments',
+                url: 'https://www.php.net/manual/en/functions.arguments.php'
+            },
+	    {
+		name: 'PHP7.0 Changelog',
+		url: 'https://www.php.net/ChangeLog-7.php#7.0.0'
+	    }
         ]
     },
     {
