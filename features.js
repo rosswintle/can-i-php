@@ -264,10 +264,26 @@ const features = [
         ]
     },
     {
-        name: 'Typed arguments',
-        description: 'Function arguments now support types.',
+        name: 'Class typed arguments',
+        description: 'Function argument type-hinting now supports class types.',
         keywords: [
-            'types', 'typehints'
+            'types', 'typehints', 'argument'
+        ],
+        added: '5.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Typed arguments for functions',
+                url: 'https://www.php.net/manual/en/functions.arguments.php#example-167'
+            }
+        ]
+    },
+    {
+        name: 'Scalar typed arguments',
+        description: 'Function argument type-hinting now supports scalar types.',
+        keywords: [
+            'types', 'typehints', 'scalar', 'argument'
         ],
         added: '7.0',
         deprecated: null,
