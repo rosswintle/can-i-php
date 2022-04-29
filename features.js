@@ -137,9 +137,9 @@ const features = [
     },
     {
         name: 'Union types',
-        description: 'A union type declaration accepts values of multiple different simple types, rather than a single one.',
+        description: 'A union type declaration accepts values of multiple different simple types, rather than a single one. Also referred to as composite types.',
         keywords: [
-            'types', 'typehints', 'declarations'
+            'types', 'typehints', 'declarations', 'composite type'
         ],
         added: '8.0',
         deprecated: null,
