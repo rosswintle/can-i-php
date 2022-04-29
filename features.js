@@ -264,6 +264,22 @@ const features = [
         ]
     },
     {
+        name: 'Typed arguments',
+        description: 'Function arguments now support types.',
+        keywords: [
+            'types', 'typehints'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Typed arguments for functions',
+                url: 'https://www.php.net/manual/en/functions.arguments.php#example-167'
+            }
+        ]
+    },
+    {
         name: 'Typed properties',
         description: 'Class properties now support type declarations.',
         keywords: [
