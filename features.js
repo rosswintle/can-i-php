@@ -296,6 +296,22 @@ const features = [
         ]
     },
     {
+        name: 'Anonymous classes',
+        description: 'Anonymous classes can be created with <code>new class</code>. They\'re used for throw away objects.',
+        keywords: [
+            'closures', 'anonymous', 'class'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Anonymous classes (php.net)',
+                url: 'https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.anonymous-classes'
+            }
+        ]
+    },
+    {
         name: 'Array unpacking (numeric keys only)',
         description: 'e.g. <code>$result = [0, …$arrayA, …$arrayB, 6, 7];</code>',
         keywords: [
