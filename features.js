@@ -116,6 +116,26 @@ const features = [
         ]
     },
     {
+        name: 'Attributes',
+        description: 'Attributes, also known as annotations in many other languages, can be used to add meta data to classes, methods, variables and what not; in a structured way. Like docblocks, but recognised properly by PHP.',
+        keywords: [
+            'annotations', 'docblocks', 'documentation', 'metadata', 'reflection'
+        ],
+        added: '8.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Attributes (php.net)',
+                url: 'https://www.php.net/manual/en/language.attributes.overview.php'
+            },
+            {
+                name: 'Attributes (stitcher.io)',
+                url: 'https://stitcher.io/blog/attributes-in-php-8'
+            }
+        ]
+    },
+    {
         name: 'Union types',
         description: 'A union type declaration accepts values of multiple different simple types, rather than a single one.',
         keywords: [
