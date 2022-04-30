@@ -427,7 +427,7 @@ const features = [
         name: 'Scalar type hints',
         description: 'As of PHP 7, the scalar types (integers, floating point numbers, booleans and strings) can be used as type hints. This is in addition to being able to use classes, arrays and callables, which were already allowed.',
         keywords: [
-            'types', 'typehints'
+            'types', 'typehints', 'typed'
         ],
         added: '7.0',
         deprecated: null,
