@@ -312,7 +312,7 @@ const features = [
         ]
     },
     {
-        name: 'Splat operator (... operator)',
+        name: 'Splat operator / argument unpacking (... operator)',
         description: 'The ... operator, aka the splat operator or array unpacking operator',
         keywords: [
             'spread', 'unpacking', 'arrays', 'splat'
