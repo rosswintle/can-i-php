@@ -1,7 +1,19 @@
 # caniphp.com
 
 caniphp.com is like caniuse.com but for PHP features. It's a simple search of
-PHP features that tells you when features were added, deprecated and removed.
+PHP features that added, deprecated and removed in recent versions of PHP (v5.6+).
+
+This is NOT a list of ALL PHP features/functions/methods/classes and when they were
+added/removed.
+
+The tool is intended for developers who know a feature was added/removed in a
+recent version of PHP and want to check which versions of the language the feature is
+supported in.
+
+I'm hand curating the information as there does not appear to be an easily machine-readable and definitive source. As such, not all features are added yet
+and more will be added over time.
+
+I would love you to pull-request any missing or incorrect data.
 
 It's built with:
  - [AlpineJS](https://alpinejs.dev)
@@ -37,8 +49,11 @@ I'd also love PRs to add translations. Maybe contact me first or open an issue i
 
 I am manually curating the list of features and related content here. And I'd love for people to help by PR-ing additions.
 
-PHP features are listed in `features.js`. Hopefully the format of this makes sense. But
-for reference
+Feautures to add to the list will need to meet the following criteria:
+
+* They were added, deprecated or removed in PHP version 5.6 or greater.
+
+PHP features are listed in `features.js`. Hopefully the format of this makes sense. But for reference
 
 * the whole thing is a JSON array
 * each entry is an object with the following properties:
@@ -51,3 +66,24 @@ for reference
   * `resources`: This is an array of objects representing links to documentation or articles about the feature. Each link object has the following properties:
     * `name`: The title of the link
     * `url`: The URL of the link
+
+A sample entry:
+
+```
+    {
+        name: 'Spaceship operator',
+        description: 'Use <code><=></code> for comparisons for sorting',
+        keywords: [
+            'short', 'shorthand', 'spaceship', 'space ship', 'comparisons', 'operators', 'sorting'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Spaceship operator (stitcher.io)',
+                url: 'https://stitcher.io/blog/shorthand-comparisons-in-php#spaceship-operator'
+            }
+        ]
+    }
+```
