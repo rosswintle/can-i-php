@@ -463,7 +463,7 @@ const features = [
         name: 'Spaceship operator',
         description: 'Use <code><=></code> for comparisons for sorting',
         keywords: [
-            'short', 'shorthand', 'spaceship', 'comparisons', 'operators', 'sorting'
+            'short', 'shorthand', 'spaceship', 'space ship', 'comparisons', 'operators', 'sorting'
         ],
         added: '7.0',
         deprecated: null,
