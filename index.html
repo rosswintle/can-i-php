@@ -36,6 +36,16 @@
                     >
             </form>
 
+            <div class="text-left prose lg:prose-xl" x-show="filteredFeatures().length === 0">
+                <h3>Nothing matches!</h3>
+                <p>It could be that:</p>
+                <ul>
+                    <li>We know about the thing, but your search didn't find it - try again!</li>
+                    <li>We don't know about the thing: This is not a list of ALL PHP functions and features, just those added or removed in recent versions. And the information is not yet complete so please bear with us as we add more data.</li>
+                </ul>
+                <p>If you think something is missing then feel free to open a pull request on <a href="https://github.com/rosswintle/can-i-php">the GitHub repo</a> to add it.</p>
+            </div>
+
             <div class="text-left">
                 <template x-for="feature in filteredFeatures()">
                     <!-- Feature panel -->
