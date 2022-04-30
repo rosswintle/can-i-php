@@ -264,22 +264,6 @@ const features = [
         ]
     },
     {
-        name: 'Typed arguments',
-        description: 'Function arguments now support types.',
-        keywords: [
-            'types', 'typehints'
-        ],
-        added: '7.0',
-        deprecated: null,
-        removed: null,
-        resources: [
-            {
-                name: 'Typed arguments for functions',
-                url: 'https://www.php.net/manual/en/functions.arguments.php#example-167'
-            }
-        ]
-    },
-    {
         name: 'Typed properties',
         description: 'Class properties now support type declarations.',
         keywords: [
@@ -436,6 +420,22 @@ const features = [
             {
                 name: 'Spaceship operator (stitcher.io)',
                 url: 'https://stitcher.io/blog/shorthand-comparisons-in-php#spaceship-operator'
+            }
+        ]
+    },
+    {
+        name: 'Scalar type hints',
+        description: 'As of PHP 7, the scalar types (integers, floating point numbers, booleans and strings) can be used as type hints. This is in addition to being able to use classes, arrays and callables, which were already allowed.',
+        keywords: [
+            'types', 'typehints'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'What is new in PHP 7?',
+                url: 'https://trimurtidev.in/what-is-new-in-php-7/'
             }
         ]
     },
