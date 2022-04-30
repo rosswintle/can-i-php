@@ -137,9 +137,9 @@ const features = [
     },
     {
         name: 'Union types',
-        description: 'A union type declaration accepts values of multiple different simple types, rather than a single one.',
+        description: 'A union type declaration accepts values of multiple different simple types, rather than a single one. Also referred to as composite types.',
         keywords: [
-            'types', 'typehints', 'declarations'
+            'types', 'typehints', 'declarations', 'composite type'
         ],
         added: '8.0',
         deprecated: null,
@@ -420,6 +420,22 @@ const features = [
             {
                 name: 'Spaceship operator (stitcher.io)',
                 url: 'https://stitcher.io/blog/shorthand-comparisons-in-php#spaceship-operator'
+            }
+        ]
+    },
+    {
+        name: 'Scalar type hints',
+        description: 'As of PHP 7, the scalar types (integers, floating point numbers, booleans and strings) can be used as type hints. This is in addition to being able to use classes, arrays and callables, which were already allowed.',
+        keywords: [
+            'types', 'typehints', 'typed'
+        ],
+        added: '7.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'What is new in PHP 7?',
+                url: 'https://trimurtidev.in/what-is-new-in-php-7/'
             }
         ]
     },
