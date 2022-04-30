@@ -26,8 +26,8 @@ const features = [
         removed: null,
         resources: [
             {
-                name: 'Array unpacking with string keys',
-                url: ''
+                name: 'RFC (php.net)',
+                url: 'https://wiki.php.net/rfc/array_unpacking_string_keys'
             }
         ]
     },
@@ -260,6 +260,26 @@ const features = [
             {
                 name: 'str_ends_with (php.net)',
                 url: 'https://www.php.net/manual/en/function.str-ends-with.php'
+            }
+        ]
+    },
+    {
+        name: 'Throw expression',
+        description: 'The <code>throw</code> keyword is an expression, therefore an exception can be thrown in any expression context.',
+        keywords: [
+            'throw', 'expression', 'exceptions'
+        ],
+        added: '8.0',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Exceptions (php.net)',
+                url: 'https://www.php.net/manual/en/language.exceptions.php'
+            },
+            {
+                name: 'RFC (php.net)',
+                url: 'https://wiki.php.net/rfc/throw_expression'
             }
         ]
     },
