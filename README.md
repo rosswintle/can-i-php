@@ -45,7 +45,7 @@ for reference
   * `name`: The name of the feature - plain text only
   * `description`: A description of the feature - HTML is allowed, but may not be styled. `<code>` tags are fine.
   * `keywords`: An array of strings. These are used when searching, so add strings that people may use to search for this feature.
-  * `added`: A string for the version of PHP that the feature was added. Must be in the format `X.Y`, e.g. `7.0`. Use `null` if this is not know or appropriate.
+  * `added`: A string for the version of PHP that the feature was added. Must be in the format `X.Y`, e.g. `7.0`. Use `0.0` if this is not known or appropriate.
   * `deprecated`: A string for the version of PHP that the feature was deprecated. Must be in the format `X.Y`, e.g. `8.0`. Use `null` if this is not know or appropriate.
   * `removed`: A string for the version of PHP that the feature was removed. Must be in the format `X.Y`, e.g. `8.2`. Use `null` if this is not know or appropriate.
   * `resources`: This is an array of objects representing links to documentation or articles about the feature. Each link object has the following properties:
