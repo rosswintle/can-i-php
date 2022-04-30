@@ -506,5 +506,21 @@ const features = [
                 url: 'https://stitcher.io/blog/shorthand-comparisons-in-php#shorthand-ternary-operator'
             }
         ]
+    },
+    {
+        name: 'get_magic_quotes_gpc',
+        description: 'Gets the current configuration setting of magic_quotes_gpc',
+        keywords: [
+            'functions', 'deprecated', 'removed'
+        ],
+        added: '0.0',
+        deprecated: '7.4',
+        removed: '8.0',
+        resources: [
+            {
+                name: 'get_magic_quotes_gpc (php.net)',
+                url: 'https://www.php.net/manual/en/function.get-magic-quotes-gpc.php'
+            }
+        ]
     }
 ]
