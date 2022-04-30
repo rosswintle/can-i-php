@@ -57,7 +57,7 @@
                                     </ul>
                                 </div>
                                 <div class="w-1/4 pl-4">
-                                    <p x-show="feature.added">
+                                    <p x-show="feature.added && feature.added !== '0.0'">
                                         Added: PHP v<span x-text="feature.added"></span>
                                     </p>
                                     <p x-show="feature.deprecated">
