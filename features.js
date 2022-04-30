@@ -348,6 +348,22 @@ const features = [
         ]
     },
     {
+        name: 'Splat operator / argument unpacking (... operator)',
+        description: 'The ... operator, aka the splat operator or array unpacking operator',
+        keywords: [
+            'spread', 'unpacking', 'arrays', 'splat'
+        ],
+        added: '5.6',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'Argument unpacking via ...',
+                url: 'https://www.php.net/manual/en/migration56.new-features.php#migration56.new-features.splat'
+            }
+        ]
+    },
+    {
         name: 'Multi catch exception handline',
         description: 'A catch block may specify multiple exceptions using the pipe (|) character',
         keywords: [
