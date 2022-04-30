@@ -17,7 +17,7 @@ const features = [
     },
     {
         name: 'Array unpacking with string keys',
-        description: 'e.g. <code>$result = [\'a\' => 0, …$arrayA, …$arrayB];</code>',
+        description: 'e.g. <code>$result = [\'a\' => 0, ...$arrayA, ...$arrayB];</code>',
         keywords: [
             'spread', 'unpacking', 'arrays', 'deconstruct'
         ],
