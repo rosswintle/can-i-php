@@ -49,7 +49,7 @@ I'd also love PRs to add translations. Maybe contact me first or open an issue i
 
 I am manually curating the list of features and related content here. And I'd love for people to help by PR-ing additions.
 
-Feautures to add to the list will need to meet the following criteria:
+Features to add to the list will need to meet the following criteria:
 
 * They were added, deprecated or removed in PHP version 5.6 or greater.
 
