@@ -315,12 +315,16 @@ const features = [
         name: 'Underscore as numeric separator',
         description: 'An underscore "<code>_</code>" can be used in numeric literals to visually separate groups of digits.',
         keywords: [
-            'numbers', 'underscore'
+            'numbers', 'underscore', 'literals'
         ],
         added: '7.4',
         deprecated: null,
         removed: null,
         resources: [
+            {
+                name: 'Integers (php.net)',
+                url: 'https://www.php.net/manual/en/language.types.integer.php'
+            },
             {
                 name: 'RFC (php.net)',
                 url: 'https://wiki.php.net/rfc/numeric_literal_separator'
