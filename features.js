@@ -374,7 +374,7 @@ const features = [
   {
     name: "Filtered unserialize()",
     description:
-      'Filtered unserialize allows developers to specify which classes they expect data to unserialize into "<code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>". This improves security greatly when using PHP serialization.',
+      'Filtered unserialize allows developers to specify which classes they expect data to unserialize into. For example: <code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>. This improves security greatly when using PHP serialization.',
     keywords: ["unserialize", "security", "serialize"],
     added: "7.0",
     deprecated: null,
