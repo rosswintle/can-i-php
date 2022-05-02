@@ -387,7 +387,7 @@ const features = [
       {
         name: "Unserialize manual page (php.net)",
         url: "https://www.php.net/manual/en/function.unserialize.php",
-      }
+      },
     ],
   },
   {
