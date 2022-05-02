@@ -46,6 +46,15 @@ So I'm happy to take PR's to add PHP features or improve the design.
 
 I'd also love PRs to add translations. Maybe contact me first or open an issue if you want to do that so we can discuss a structure.
 
+### Code style
+
+Thanks to [@GenieTim](https://github.com/GenieTim) this project uses Prettier for
+code style and formatting.
+
+Please run `npm run prettier` to format code before submitting any PR.
+
+I'm working on getting Git hooks to work and run this on commit.
+
 ### Adding PHP features
 
 I am manually curating the list of features and related content here. And I'd love for people to help by PR-ing additions.

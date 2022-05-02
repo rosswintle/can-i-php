@@ -5,7 +5,8 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fix:cs": "prettier --write ."
+    "fix:cs": "prettier --write .",
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
