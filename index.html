@@ -1,102 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://caniphp.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:title" content="Can I PHP? - caniuse.com but for PHP features">
-    <meta name="og:description" content="caniuse.com but for PHP features">
-    <meta name="og:image" content="https://can-i-use.com/images/can-i-php-screen.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="https://caniphp.com/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="og:title"
+      content="Can I PHP? - caniuse.com but for PHP features"
+    />
+    <meta name="og:description" content="caniuse.com but for PHP features" />
+    <meta
+      name="og:image"
+      content="https://can-i-use.com/images/can-i-php-screen.png"
+    />
     <title>Can I PHP? - caniuse.com but for PHP features</title>
-    <meta name="description" content="A list of PHP features and the versions of PHP that they are present in. Like caniuse.com but for PHP!" />
-    <link href="/dist/style.css" rel="stylesheet">
-</head>
-<body>
-    <div id="app" x-data="features" class="text-center pt-6 pb-24 px-6 md:w-2/3 max-w-4xl mx-auto">
-        <header class="mb-12">
-            <div class="mb-14 text-sm">
-                <a class="underline hover:no-underline" href="https://github.com/rosswintle/can-i-php/blob/main/README.md">README.md</a> &mdash;
-                <a class="underline hover:no-underline" href="https://github.com/rosswintle/can-i-php">Github</a> &mdash;
-                By <a class="underline hover:no-underline" href="https://twitter.com/magicroundabout">@magicroundabout</a> &mdash;
-                <a class="underline hover:no-underline" href="https://ko-fi.com/magicroundabout">Buy me coffee</a> OR
-                <a class="underline hover:no-underline" href="https://turbo-admin.com">Check out my WordPress Browser Extension</a>
-            </div>
-            <div class="mb-4 text-2xl"><strong>Unofficial</strong> and <em>incomplete</em></div>
-            <h1 class="text-6xl tracking-wider font-bold mb-3">Can I PHP?</h1>
-            <p class="text-center mx-auto lg:w-2/3">PHP feature support by version - like caniuse.com but for PHP.<br>
-            This is a list of language features and functions added or removed in recent PHP versions. It is not an exhaustive reference.</p>
-        </header>
-        <main>
-            <form action="" @submit.prevent="">
-                <input
-                    x-model="searchString"
-                    type="search"
-                    name="s"
-                    placeholder="Search for a PHP feature"
-                    class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
+    <meta
+      name="description"
+      content="A list of PHP features and the versions of PHP that they are present in. Like caniuse.com but for PHP!"
+    />
+    <link href="/dist/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      id="app"
+      x-data="features"
+      class="text-center pt-6 pb-24 px-6 md:w-2/3 max-w-4xl mx-auto"
+    >
+      <header class="mb-12">
+        <div class="mb-14 text-sm">
+          <a
+            class="underline hover:no-underline"
+            href="https://github.com/rosswintle/can-i-php/blob/main/README.md"
+            >README.md</a
+          >
+          &mdash;
+          <a
+            class="underline hover:no-underline"
+            href="https://github.com/rosswintle/can-i-php"
+            >Github</a
+          >
+          &mdash; By
+          <a
+            class="underline hover:no-underline"
+            href="https://twitter.com/magicroundabout"
+            >@magicroundabout</a
+          >
+          &mdash;
+          <a
+            class="underline hover:no-underline"
+            href="https://ko-fi.com/magicroundabout"
+            >Buy me coffee</a
+          >
+          OR
+          <a class="underline hover:no-underline" href="https://turbo-admin.com"
+            >Check out my WordPress Browser Extension</a
+          >
+        </div>
+        <div class="mb-4 text-2xl">
+          <strong>Unofficial</strong> and <em>incomplete</em>
+        </div>
+        <h1 class="text-6xl tracking-wider font-bold mb-3">Can I PHP?</h1>
+        <p class="text-center mx-auto lg:w-2/3">
+          PHP feature support by version - like caniuse.com but for PHP.<br />
+          This is a list of language features and functions added or removed in
+          recent PHP versions. It is not an exhaustive reference.
+        </p>
+      </header>
+      <main>
+        <form action="" @submit.prevent="">
+          <input
+            x-model="searchString"
+            type="search"
+            name="s"
+            placeholder="Search for a PHP feature"
+            class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
+          />
+        </form>
+
+        <div
+          class="text-left prose lg:prose-xl"
+          x-show="filteredFeatures().length === 0"
+        >
+          <h3>Nothing matches!</h3>
+          <p>It could be that:</p>
+          <ul>
+            <li>
+              We know about the thing, but your search didn't find it - try
+              again!
+            </li>
+            <li>
+              We don't know about the thing: This is not a list of ALL PHP
+              functions and features, just those added or removed in recent
+              versions. And the information is not yet complete so please bear
+              with us as we add more data.
+            </li>
+          </ul>
+          <p>
+            If you think something is missing then feel free to open a pull
+            request on
+            <a href="https://github.com/rosswintle/can-i-php"
+              >the GitHub repo</a
+            >
+            to add it.
+          </p>
+        </div>
+
+        <div class="text-left">
+          <template x-for="feature in filteredFeatures()">
+            <!-- Feature panel -->
+            <article class="w-full mb-6">
+              <!-- Feature info -->
+              <div class="w-full border border-b-none py-2 px-4">
+                <h2 x-text="feature.name" class="text-lg mb-4 font-bold"></h2>
+                <div class="flex">
+                  <!-- Feature top panel, left column -->
+                  <div class="w-3/4 pr-4">
+                    <p
+                      x-html="formatAsHtml(feature.description)"
+                      class="mb-6"
+                    ></p>
+                    <h3 class="font-bold text-l mb-2">Resources</h3>
+                    <ul
+                      x-show="feature?.resources?.length > 0"
+                      class="list-disc list-inside text-sm mb-4"
                     >
-            </form>
-
-            <div class="text-left prose lg:prose-xl" x-show="filteredFeatures().length === 0">
-                <h3>Nothing matches!</h3>
-                <p>It could be that:</p>
-                <ul>
-                    <li>We know about the thing, but your search didn't find it - try again!</li>
-                    <li>We don't know about the thing: This is not a list of ALL PHP functions and features, just those added or removed in recent versions. And the information is not yet complete so please bear with us as we add more data.</li>
-                </ul>
-                <p>If you think something is missing then feel free to open a pull request on <a href="https://github.com/rosswintle/can-i-php">the GitHub repo</a> to add it.</p>
-            </div>
-
-            <div class="text-left">
-                <template x-for="feature in filteredFeatures()">
-                    <!-- Feature panel -->
-                    <div class="w-full mb-6">
-                        <!-- Feature info -->
-                        <div class="w-full border border-b-none py-2 px-4">
-                            <h2 x-text="feature.name" class="text-lg mb-4 font-bold"></h2>
-                            <div class="flex">
-                                <!-- Feature top panel, left column -->
-                                <div class="w-3/4 pr-4">
-                                    <p x-html="formatAsHtml(feature.description)" class="mb-6"></p>
-                                    <h3 class="font-bold text-l mb-2">Resources</h3>
-                                    <ul x-show="feature?.resources?.length > 0" class="list-disc list-inside text-sm mb-4">
-                                        <template x-for="resource in feature.resources">
-                                            <li>
-                                                <a x-text="resource.name" class="underline hover:no-underline" :href="resource.url"></a>
-                                            </li>
-                                        </template>
-                                    </ul>
-                                </div>
-                                <div class="w-1/4 pl-4">
-                                    <p x-show="feature.added && feature.added !== '0.0'">
-                                        Added: PHP v<span x-text="feature.added"></span>
-                                    </p>
-                                    <p x-show="feature.deprecated">
-                                        Deprecated: PHP v<span x-text="feature.deprecated"></span>
-                                    </p>
-                                    <p x-show="feature.removed">
-                                        Removed: PHP v<span x-text="feature.removed"></span>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Feature versions - colored boxes -->
-                        <div class="flex w-full overflow-auto">
-                            <template x-for="version in versions">
-                                <div class="flex-1 px-3 py-2 text-center" :class="featureSupportedIn(feature, version.version) ? 'bg-green-300 font-bold' : 'bg-red-300'">
-                                    <span x-text="version.version"></span>
-                                </div>
-                            </template>
-                        </div>
-                    </article>
+                      <template x-for="resource in feature.resources">
+                        <li>
+                          <a
+                            x-text="resource.name"
+                            class="underline hover:no-underline"
+                            :href="resource.url"
+                          ></a>
+                        </li>
+                      </template>
+                    </ul>
+                  </div>
+                  <div class="w-1/4 pl-4">
+                    <p x-show="feature.added && feature.added !== '0.0'">
+                      Added: PHP v<span x-text="feature.added"></span>
+                    </p>
+                    <p x-show="feature.deprecated">
+                      Deprecated: PHP v<span x-text="feature.deprecated"></span>
+                    </p>
+                    <p x-show="feature.removed">
+                      Removed: PHP v<span x-text="feature.removed"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Feature versions - colored boxes -->
+              <div class="flex w-full overflow-auto">
+                <template x-for="version in versions">
+                  <div
+                    class="flex-1 px-3 py-2 text-center"
+                    :class="featureSupportedIn(feature, version.version) ? 'bg-green-300 font-bold' : 'bg-red-300'"
+                  >
+                    <span x-text="version.version"></span>
+                  </div>
                 </template>
-            </div>
-        </main>
+              </div>
+            </article>
+          </template>
+        </div>
+      </main>
     </div>
     <!-- Fathom - beautiful, simple website analytics -->
-    <script src="https://polished-thirtyfive.caniphp.com/script.js" data-site="IULNCQBS" defer></script>
+    <script
+      src="https://polished-thirtyfive.caniphp.com/script.js"
+      data-site="IULNCQBS"
+      defer
+    ></script>
     <!-- / Fathom -->
 
     <script src="versions.js"></script>
@@ -104,100 +178,106 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <script>
-        document.addEventListener('alpine:init', () => {
-            document.querySelector('input[name=s]').focus();
+      document.addEventListener("alpine:init", () => {
+        document.querySelector("input[name=s]").focus();
 
-            const url = new URL(window.location.href);
+        const url = new URL(window.location.href);
 
-            const searchParam = url.searchParams.get('s');
+        const searchParam = url.searchParams.get("s");
 
-            Alpine.data('features', () => {
-                return {
-                    // searchString: window.location.pathname.slice(1) ?? '',
-                    searchString: searchParam ?? '',
+        Alpine.data("features", () => {
+          return {
+            // searchString: window.location.pathname.slice(1) ?? '',
+            searchString: searchParam ?? "",
 
-                    versions: versions,
+            versions: versions,
 
-                    init() {
-                        this.$watch('searchString', value => {
-                            const url = new URL(window.location.href);
-                            url.searchParams.set('s', value);
-                            history.replaceState(null, '', url);
-                        } );
-                    },
+            init() {
+              this.$watch("searchString", (value) => {
+                const url = new URL(window.location.href);
+                url.searchParams.set("s", value);
+                history.replaceState(null, "", url);
+              });
+            },
 
-                    versionCompare(v1, v2) {
-                        if (v1 === v2) {
-                            return 0;
-                        }
+            versionCompare(v1, v2) {
+              if (v1 === v2) {
+                return 0;
+              }
 
-                        const v1parts = v1.split('.')
-                        const v2parts = v2.split('.')
+              const v1parts = v1.split(".");
+              const v2parts = v2.split(".");
 
-                        if (v1parts[0] > v2parts[0]) {
-                            return 1
-                        }
+              if (v1parts[0] > v2parts[0]) {
+                return 1;
+              }
 
-                        if (v1parts[0] < v2parts[0]) {
-                            return -1
-                        }
+              if (v1parts[0] < v2parts[0]) {
+                return -1;
+              }
 
-                        return (v1parts[1] > v2parts[1]) ? 1 : -1;
-                    },
+              return v1parts[1] > v2parts[1] ? 1 : -1;
+            },
 
-                    featureSupportedIn(feature, version) {
-                        // Can't tell if feature is added
-                        if (feature.added === null) {
-                            return false;
-                        }
+            featureSupportedIn(feature, version) {
+              // Can't tell if feature is added
+              if (feature.added === null) {
+                return false;
+              }
 
-                        // Feature is not yet added in this version
-                        if (this.versionCompare(feature.added, version) === 1) {
-                            return false;
-                        }
+              // Feature is not yet added in this version
+              if (this.versionCompare(feature.added, version) === 1) {
+                return false;
+              }
 
-                        // Feature is added, removal is not specified
-                        if (feature.removed === null) {
-                            return true;
-                        }
+              // Feature is added, removal is not specified
+              if (feature.removed === null) {
+                return true;
+              }
 
-                        // Feature is removed
-                        if (this.versionCompare(feature.removed, version) <= 0) {
-                            return false;
-                        }
+              // Feature is removed
+              if (this.versionCompare(feature.removed, version) <= 0) {
+                return false;
+              }
 
-                        // Feature is added and not removed
-                        return true;
-                    },
+              // Feature is added and not removed
+              return true;
+            },
 
-                    filteredFeatures() {
-                        return this.featuresHaving(this.searchString);
-                    },
+            filteredFeatures() {
+              return this.featuresHaving(this.searchString);
+            },
 
-                    featureMatches(feature, keyword) {
-                        keyword = keyword.toLowerCase();
-                        return feature.name.toLowerCase().includes(keyword) ||
-                            feature.description.toLowerCase().includes(keyword) ||
-                            feature.keywords.some(featureKeyword => featureKeyword.toLowerCase().includes(keyword));
-                    },
+            featureMatches(feature, keyword) {
+              keyword = keyword.toLowerCase();
+              return (
+                feature.name.toLowerCase().includes(keyword) ||
+                feature.description.toLowerCase().includes(keyword) ||
+                feature.keywords.some((featureKeyword) =>
+                  featureKeyword.toLowerCase().includes(keyword)
+                )
+              );
+            },
 
-                    featuresHaving(featureKeyword) {
-                        const versions = features.filter(feature => this.featureMatches(feature, featureKeyword));
-                        return versions;
-                    },
+            featuresHaving(featureKeyword) {
+              const versions = features.filter((feature) =>
+                this.featureMatches(feature, featureKeyword)
+              );
+              return versions;
+            },
 
-                    /*
-                     * This does some basic formatting.
-                     *
-                     *  - backticks are converted to <code></code>
-                     */
-                    formatAsHtml(rawString) {
-                        htmlString = rawString.replace(/`(.*?)`/g, '<code>$1</code>');
-                        return htmlString;
-                    }
-                }
-            });
+            /*
+             * This does some basic formatting.
+             *
+             *  - backticks are converted to <code></code>
+             */
+            formatAsHtml(rawString) {
+              htmlString = rawString.replace(/`(.*?)`/g, "<code>$1</code>");
+              return htmlString;
+            },
+          };
         });
+      });
     </script>
-</body>
+  </body>
 </html>
