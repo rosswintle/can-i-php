@@ -1,7 +1,7 @@
 # caniphp.com
 
-caniphp.com is like caniuse.com but for PHP features. It's a simple search of
-PHP features that added, deprecated and removed in recent versions of PHP (v5.6+).
+[caniphp.com](https://caniphp.com/) is like caniuse.com but for PHP features. It's a simple search of PHP features that added, deprecated and removed in recent versions
+of PHP (v5.6+).
 
 This is NOT a list of ALL PHP features/functions/methods/classes and when they were
 added/removed.
@@ -16,10 +16,9 @@ and more will be added over time.
 I would love you to pull-request any missing or incorrect data.
 
 It's built with:
-
-- [AlpineJS](https://alpinejs.dev)
-- [TailwindCSS](https://tailwindcss.com)
-- (Ironically) ZERO PHP was used.
+ - [AlpineJS](https://alpinejs.dev)
+ - [TailwindCSS](https://tailwindcss.com)
+ - (Ironically) ZERO PHP was used.
 
 ## Setup and build
 
@@ -27,13 +26,13 @@ If you want to contribute there is a very simple build process that will hopeful
 
 Start by:
 
-- Cloning the repository
-- Running `npm install`
+* Cloning the repository
+* Running `npm install`
 
 Then to build the CSS using Tailwind you can either:
 
-- `./build.sh` for a one off build or
-- `./watch.sh` to run a file watcher
+* `./build.sh` for a one off build or
+* `./watch.sh` to run a file watcher
 
 There is no hot reloading or anything like that.
 
@@ -50,23 +49,23 @@ I'd also love PRs to add translations. Maybe contact me first or open an issue i
 
 I am manually curating the list of features and related content here. And I'd love for people to help by PR-ing additions.
 
-Feautures to add to the list will need to meet the following criteria:
+Features to add to the list will need to meet the following criteria:
 
-- They were added, deprecated or removed in PHP version 5.6 or greater.
+* They were added, deprecated or removed in PHP version 5.6 or greater.
 
 PHP features are listed in `features.js`. Hopefully the format of this makes sense. But for reference
 
-- the whole thing is a JSON array
-- each entry is an object with the following properties:
-  - `name`: The name of the feature - plain text only
-  - `description`: A description of the feature - HTML is allowed, but may not be styled. `<code>` tags are fine.
-  - `keywords`: An array of strings. These are used when searching, so add strings that people may use to search for this feature.
-  - `added`: A string for the version of PHP that the feature was added. Must be in the format `X.Y`, e.g. `7.0`. Use `0.0` if this is not known or appropriate.
-  - `deprecated`: A string for the version of PHP that the feature was deprecated. Must be in the format `X.Y`, e.g. `8.0`. Use `null` if this is not know or appropriate.
-  - `removed`: A string for the version of PHP that the feature was removed. Must be in the format `X.Y`, e.g. `8.2`. Use `null` if this is not know or appropriate.
-  - `resources`: This is an array of objects representing links to documentation or articles about the feature. Each link object has the following properties:
-    - `name`: The title of the link
-    - `url`: The URL of the link
+* the whole thing is a JSON array
+* each entry is an object with the following properties:
+  * `name`: The name of the feature - plain text only
+  * `description`: A description of the feature - HTML is allowed, but may not be styled. `<code>` tags are fine and backticks will be converted to code tags.
+  * `keywords`: An array of strings. These are used when searching, so add strings that people may use to search for this feature.
+  * `added`: A string for the version of PHP that the feature was added. Must be in the format `X.Y`, e.g. `7.0`. Use `0.0` if this is not known or appropriate.
+  * `deprecated`: A string for the version of PHP that the feature was deprecated. Must be in the format `X.Y`, e.g. `8.0`. Use `null` if this is not know or appropriate.
+  * `removed`: A string for the version of PHP that the feature was removed. Must be in the format `X.Y`, e.g. `8.2`. Use `null` if this is not know or appropriate.
+  * `resources`: This is an array of objects representing links to documentation or articles about the feature. Each link object has the following properties:
+    * `name`: The title of the link
+    * `url`: The URL of the link
 
 A sample entry:
 
