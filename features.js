@@ -542,5 +542,54 @@ const features = [
                 url: 'https://www.php.net/manual/en/function.get-magic-quotes-gpc.php'
             }
         ]
+    },
+    {
+        name: 'FILTER_FLAG_SCHEME_REQUIRED',
+        description: 'Filter flag for `filter_var()`',
+        keywords: [
+            'filter', 'constant', 'deprecated', 'removed'
+        ],
+        added: '0.0',
+        deprecated: '7.3.0',
+        removed: '8.0',
+        resources: [
+            {
+                name: 'Validate filters',
+                url: 'https://www.php.net/manual/en/filter.filters.validate.php'
+            }
+        ]
+    },
+    {
+        name: 'FILTER_FLAG_HOST_REQUIRED',
+        description: 'Filter flag for `filter_var()`',
+        keywords: [
+            'filter', 'constant', 'deprecated', 'removed'
+        ],
+        added: '0.0',
+        deprecated: '7.3.0',
+        removed: '8.0',
+        resources: [
+            {
+                name: 'Validate filters',
+                url: 'https://www.php.net/manual/en/filter.filters.validate.php'
+            }
+        ]
+    },
+    {
+        name: 'Fibers (Fiber class, Fiber exceptions)',
+        description: 'Lightweight concurrency for PHP',
+        keywords: [
+            'class', 'types', 'new feature', 'functionality', 'concurrency'
+        ],
+        added: '8.1',
+        resources: [
+            {
+                name: 'PHP.Watch Introduction to Fibers',
+                url: 'https://php.watch/versions/8.1/fibers'
+            }, {
+                name: 'PHP Documentation',
+                url: 'https://www.php.net/manual/en/language.fibers.php'
+            }
+        ]
     }
 ]
