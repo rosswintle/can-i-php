@@ -1,7 +1,7 @@
 # caniphp.com
 
-[caniphp.com](https://caniphp.com) is like caniuse.com but for PHP features. It's a simple search of
-PHP features that added, deprecated and removed in recent versions of PHP (v5.6+).
+[caniphp.com](https://caniphp.com/) is like caniuse.com but for PHP features. It's a simple search of PHP features that added, deprecated and removed in recent versions
+of PHP (v5.6+).
 
 This is NOT a list of ALL PHP features/functions/methods/classes and when they were
 added/removed.
