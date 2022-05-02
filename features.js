@@ -372,6 +372,25 @@ const features = [
     ],
   },
   {
+    name: "Filtered unserialize()",
+    description:
+      'Filtered unserialize allows developers to specify which classes they expect data to unserialize into "<code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>". This improves security greatly when using PHP serialization.',
+    keywords: ["unserialize", "security", "serialize"],
+    added: "7.0",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP 7 New features page (php.net)",
+        url: "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.filtered-unserialize",
+      },
+      {
+        name: "Unserialize manual page (php.net)",
+        url: "https://www.php.net/manual/en/function.unserialize.php",
+      }
+    ],
+  },
+  {
     name: "Splat operator / argument unpacking (... operator)",
     description:
       "The ... operator, aka the splat operator or array unpacking operator",
