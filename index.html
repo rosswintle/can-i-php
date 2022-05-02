@@ -58,7 +58,7 @@
                             <div class="flex">
                                 <!-- Feature top panel, left column -->
                                 <div class="w-3/4 pr-4">
-                                    <p x-html="feature.description" class="mb-6"></p>
+                                    <p x-html="formatAsHtml(feature.description)" class="mb-6"></p>
                                     <h3 class="font-bold text-l mb-2">Resources</h3>
                                     <ul x-show="feature?.resources?.length > 0" class="list-disc list-inside text-sm mb-4">
                                         <template x-for="resource in feature.resources">
@@ -184,6 +184,16 @@
                     featuresHaving(featureKeyword) {
                         const versions = features.filter(feature => this.featureMatches(feature, featureKeyword));
                         return versions;
+                    },
+
+                    /*
+                     * This does some basic formatting.
+                     *
+                     *  - backticks are converted to <code></code>
+                     */
+                    formatAsHtml(rawString) {
+                        htmlString = rawString.replace(/`(.*?)`/g, '<code>$1</code>');
+                        return htmlString;
                     }
                 }
             });
