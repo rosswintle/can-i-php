@@ -1,5 +1,24 @@
 const features = [
     {
+        name: 'Fibers (Fiber class, Fiber exceptions)',
+        description: 'Lightweight concurrency for PHP. Fibers represent full-stack, interruptible functions. Fibers may be suspended from anywhere in the call-stack, pausing execution within the fiber until the fiber is resumed at a later time.',
+        keywords: [
+            'class', 'types', 'functionality', 'concurrency', 'interruptible', 'functions'
+        ],
+        added: '8.1',
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: 'PHP.Watch Introduction to Fibers (php.watch)',
+                url: 'https://php.watch/versions/8.1/fibers'
+            }, {
+                name: 'Fibres overview and documentation (php.net)',
+                url: 'https://www.php.net/manual/en/language.fibers.php'
+            }
+        ]
+    },
+    {
         name: 'Enums',
         description: 'Enums are a way to define a set of named constants.',
         keywords: [
@@ -544,51 +563,42 @@ const features = [
         ]
     },
     {
-        name: 'FILTER_FLAG_SCHEME_REQUIRED',
-        description: 'Filter flag for `filter_var()`',
+        name: 'FILTER_FLAG_SCHEME_REQUIRED constant',
+        description: 'Filter flag for `filter_var()` for use with `FILTER_VALIDATE_URL`',
         keywords: [
-            'filter', 'constant', 'deprecated', 'removed'
+            'filters', 'constants', 'deprecated', 'removed', 'urls', 'validation'
         ],
         added: '0.0',
         deprecated: '7.3.0',
         removed: '8.0',
         resources: [
             {
-                name: 'Validate filters',
+                name: 'Validate filters (php.net)',
                 url: 'https://www.php.net/manual/en/filter.filters.validate.php'
+            },
+            {
+                name: 'Filter flags (php.net)',
+                url: 'https://www.php.net/manual/en/filter.filters.flags.php'
             }
         ]
     },
     {
-        name: 'FILTER_FLAG_HOST_REQUIRED',
-        description: 'Filter flag for `filter_var()`',
+        name: 'FILTER_FLAG_HOST_REQUIRED constant',
+        description: 'Filter flag for `filter_var()` for use with `FILTER_VALIDATE_URL`',
         keywords: [
-            'filter', 'constant', 'deprecated', 'removed'
+            'filters', 'constants', 'deprecated', 'removed', 'urls', 'validation'
         ],
         added: '0.0',
         deprecated: '7.3.0',
         removed: '8.0',
         resources: [
             {
-                name: 'Validate filters',
+                name: 'Validate filters (php.net)',
                 url: 'https://www.php.net/manual/en/filter.filters.validate.php'
-            }
-        ]
-    },
-    {
-        name: 'Fibers (Fiber class, Fiber exceptions)',
-        description: 'Lightweight concurrency for PHP',
-        keywords: [
-            'class', 'types', 'new feature', 'functionality', 'concurrency'
-        ],
-        added: '8.1',
-        resources: [
+            },
             {
-                name: 'PHP.Watch Introduction to Fibers',
-                url: 'https://php.watch/versions/8.1/fibers'
-            }, {
-                name: 'PHP Documentation',
-                url: 'https://www.php.net/manual/en/language.fibers.php'
+                name: 'Filter flags (php.net)',
+                url: 'https://www.php.net/manual/en/filter.filters.flags.php'
             }
         ]
     }
