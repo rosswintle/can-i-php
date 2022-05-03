@@ -381,6 +381,24 @@ const features = [
     ],
   },
   {
+    name: "Null coalescing assignment operator",
+    description: "e.g. `$data['date'] ??= new DateTime();`",
+    keywords: ["operators", "assignment"],
+    added: "7.4",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Other assignment operators (php.net)",
+        url: "https://www.php.net/manual/en/language.operators.assignment.php#language.operators.assignment.other",
+      },
+      {
+        name: " Null coalescing assignment operator (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-74#null-coalescing-assignment-operator-rfc",
+      },
+    ],
+  },
+  {
     name: "Underscore as numeric separator",
     description:
       'An underscore "<code>_</code>" can be used in numeric literals to visually separate groups of digits.',
