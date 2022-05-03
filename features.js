@@ -611,4 +611,18 @@ const features = [
       },
     ],
   },
+  {
+    name: "array_is_list",
+    description: "Checks whether a given array is a list (useful when json encoding is involved)",
+    keywords: ["functions", "helpers", "array", "utilities", "json"],
+    added: "8.1",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "array_is_list (php.net)",
+        url: "https://www.php.net/manual/fr/function.array-is-list.php",
+      },
+    ],
+  },
 ];
