@@ -560,6 +560,50 @@ const features = [
     ],
   },
   {
+    name: "random_int",
+    description:
+      "Generates cryptographic random integers that are suitable for use where unbiased results are critical, such as when shuffling a deck of cards for a poker game.",
+    keywords: [
+      "randomness",
+      "numbers",
+      "functions",
+      "integers",
+      "cryptography",
+      "security",
+    ],
+    added: "7.0",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "random_int (php.net)",
+        url: "https://www.php.net/manual/en/function.random-int.php",
+      },
+    ],
+  },
+  {
+    name: "random_bytes",
+    description:
+      " Generates an arbitrary length string of cryptographic random bytes that are suitable for cryptographic use, such as when generating salts, keys or initialization vectors. ",
+    keywords: [
+      "randomness",
+      "numbers",
+      "functions",
+      "integers",
+      "cryptography",
+      "security",
+    ],
+    added: "7.0",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "random_bytes (php.net)",
+        url: "https://www.php.net/manual/en/function.random-bytes.php",
+      },
+    ],
+  },
+  {
     name: "Shorthand Ternary (?:)",
     description: "Use of <code>?:</code> - actually added in PHP v5.3!",
     keywords: ["short", "shorthand", "ternary", "conditional", "operators"],
