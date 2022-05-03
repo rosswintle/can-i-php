@@ -134,6 +134,21 @@ const features = [
     ],
   },
   {
+    name: "array_is_list",
+    description:
+      "Checks whether a given array is a list. An array is considered a list if its keys consist of consecutive numbers from 0. This is useful when JSON encoding is involved.",
+    keywords: ["functions", "helpers", "arrays", "utilities", "json"],
+    added: "8.1",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "array_is_list (php.net)",
+        url: "https://www.php.net/manual/fr/function.array-is-list.php",
+      },
+    ],
+  },
+  {
     name: "Attributes",
     description:
       "Attributes, also known as annotations in many other languages, can be used to add meta data to classes, methods, variables and what not; in a structured way. Like docblocks, but recognised properly by PHP.",
@@ -608,20 +623,6 @@ const features = [
       {
         name: "Filter flags (php.net)",
         url: "https://www.php.net/manual/en/filter.filters.flags.php",
-      },
-    ],
-  },
-  {
-    name: "array_is_list",
-    description: "Checks whether a given array is a list (useful when json encoding is involved)",
-    keywords: ["functions", "helpers", "array", "utilities", "json"],
-    added: "8.1",
-    deprecated: null,
-    removed: null,
-    resources: [
-      {
-        name: "array_is_list (php.net)",
-        url: "https://www.php.net/manual/fr/function.array-is-list.php",
       },
     ],
   },
