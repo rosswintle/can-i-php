@@ -63,7 +63,7 @@ Features to add to the list will need to meet the following criteria:
 
 - They were added, deprecated or removed in PHP version 5.6 or greater.
 
-PHP features are listed in `features.js`. Hopefully the format of this makes sense. But for reference
+PHP features are listed in `features.js`. This file is ordered by PHP version (see below for more on this). Hopefully the format of this makes sense. But for reference:
 
 - the whole thing is a JSON array
 - each entry is an object with the following properties:
@@ -97,3 +97,13 @@ A sample entry:
         ]
     }
 ```
+
+The file is ordered with entries related to the most recent version of PHP at the top, and the oldest version at the bottom.
+
+That means:
+
+- A feature added in the most recent version of PHP goes at the top of the file.
+- Equally a feature deprecated or removed in the most recent version of PHP
+  will also go at the top of the file.
+- A feature added in the oldest version will go at the bottom of the file. UNLESS
+  it is then deprecated or removed in a newer version.

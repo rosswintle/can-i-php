@@ -1,3 +1,16 @@
+/**
+ * The format of this file is documented in the README.md.
+ *
+ * The file is ordered with entries related to the most recent version of
+ * PHP at the top, and the oldest version at the bottom.
+ *
+ * That means:
+ *  - A feature added in the most recent version of PHP goes at the top of the file.
+ *  - Equally a feature deprecated or removed in the most recent version of PHP
+ *    will also go at the top of the file.
+ *  - A feature added in the oldest version will go at the bottom of the file. UNLESS
+ *    it is then deprecated or removed in a newer version.
+ */
 const features = [
   {
     name: "Fibers (Fiber class, Fiber exceptions)",
