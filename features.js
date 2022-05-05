@@ -452,7 +452,7 @@ const features = [
     ],
   },
   {
-    name: "Multi catch exception handline",
+    name: "Multi catch exception handling",
     description:
       "A catch block may specify multiple exceptions using the pipe (|) character",
     keywords: ["exceptions"],
