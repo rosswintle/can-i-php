@@ -13,13 +13,29 @@
  */
 const features = [
   {
+    name: "Reset peak memory usage function (memory_reset_peak_usage)",
+    description:
+      "Reset the peak memory usage returned by the <code>memory_get_peak_usage</code> function",
+    keywords: ["memory", "functions", "memory_reset_peak_usage"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "memory_reset_peak_usage (php.net)",
+        url: "https://www.php.net/manual/function.memory-reset-peak-usage.php",
+      },
+      {
+        name: "Backtrace parameter redaction (PHP.Watch)",
+        url: "https://php.watch/versions/8.2/memory_reset_peak_usage",
+      },
+    ],
+  },
+  {
     name: "Backtrace parameter redaction",
     description:
-        "Mark parameters as sensitive to exclude them from a backtrace",
-    keywords: [
-      "sensitive",
-      "debugging",
-    ],
+      "Mark parameters as sensitive to exclude them from a backtrace",
+    keywords: ["sensitive", "debugging"],
     added: "8.2",
     deprecated: null,
     removed: null,
@@ -744,13 +760,8 @@ const features = [
   },
   {
     name: "Dynamic properties",
-    description:
-      "Set values on undeclared class properties",
-    keywords: [
-      "class",
-      "dynamic",
-      "deprecated",
-    ],
+    description: "Set values on undeclared class properties",
+    keywords: ["class", "dynamic", "deprecated"],
     added: "0.0",
     deprecated: "8.2",
     removed: null,
