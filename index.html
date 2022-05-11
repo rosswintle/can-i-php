@@ -254,13 +254,21 @@
               return true;
             },
 
+            featureIsDeprecatedIn(feature, version) {
+                return feature.deprecated !== null
+                    && this.versionCompare(feature.deprecated, version) <= 0;
+            },
+
+            featureIsRemovedIn(feature, version) {
+                return feature.removed !== null
+                    && this.versionCompare(feature.removed, version) <= 0;
+            },
+
             featureSupportedClass(feature, version) {
               // Feature is deprecated, but not removed
               if (
-                feature.deprecated !== null &&
-                (feature.removed === null ||
-                  this.versionCompare(feature.removed, version) === 1) &&
-                this.versionCompare(feature.deprecated, version) <= 0
+                this.featureIsDeprecatedIn(feature, version) &&
+                !this.featureIsRemovedIn(feature, version)
               ) {
                 return "bg-amber-200";
               }
