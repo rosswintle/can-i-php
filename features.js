@@ -701,4 +701,27 @@ const features = [
       },
     ],
   },
+  {
+    name: "Dynamic properties",
+    description:
+      "Set values on undeclared class properties",
+    keywords: [
+      "class",
+      "dynamic",
+      "deprecated",
+    ],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: null,
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/deprecate_dynamic_properties",
+      },
+      {
+        name: "Dynamic Properties Deprecated (PHP.Watch)",
+        url: "https://php.watch/versions/8.2/dynamic-properties-deprecated",
+      },
+    ],
+  },
 ];
