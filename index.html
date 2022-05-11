@@ -255,8 +255,11 @@
             },
 
             featureSupportedClass(feature, version) {
+              // Feature is deprecated, but not removed
               if (
                 feature.deprecated !== null &&
+                (feature.removed === null ||
+                  this.versionCompare(feature.removed, version) === 1) &&
                 this.versionCompare(feature.deprecated, version) <= 0
               ) {
                 return "bg-amber-200";
