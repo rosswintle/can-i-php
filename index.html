@@ -164,7 +164,7 @@
                 <template x-for="version in versions">
                   <div
                     class="flex-1 px-3 py-2 text-center"
-                    :class="featureSupportedIn(feature, version.version) ? 'bg-green-300 font-bold' : 'bg-red-300'"
+                    :class="featureSupportedClass(feature, version.version)"
                   >
                     <span x-text="version.version"></span>
                   </div>
@@ -252,6 +252,19 @@
 
               // Feature is added and not removed
               return true;
+            },
+
+            featureSupportedClass(feature, version) {
+              if (
+                feature.deprecated !== null &&
+                this.versionCompare(feature.deprecated, version) <= 0
+              ) {
+                return "bg-amber-200";
+              }
+
+              return this.featureSupportedIn(feature, version)
+                ? "bg-green-300 font-bold"
+                : "bg-red-300";
             },
 
             filteredFeatures() {
