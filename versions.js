@@ -58,4 +58,10 @@ const versions = [
     deprecatedDate: "2023-11-25",
     eolDate: "2024-11-25",
   },
+  {
+    version: "8.2",
+    releasedDate: "",
+    deprecatedDate: "",
+    eolDate: "",
+  },
 ];
