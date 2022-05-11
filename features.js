@@ -764,7 +764,7 @@ const features = [
     keywords: ["class", "dynamic", "deprecated"],
     added: "0.0",
     deprecated: "8.2",
-    removed: null,
+    removed: "9.0",
     resources: [
       {
         name: "RFC (php.net)",
