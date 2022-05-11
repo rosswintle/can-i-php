@@ -13,6 +13,28 @@
  */
 const features = [
   {
+    name: "Backtrace parameter redaction",
+    description:
+        "Mark parameters as sensitive to exclude them from a backtrace",
+    keywords: [
+      "sensitive",
+      "debugging",
+    ],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/redact_parameters_in_back_traces",
+      },
+      {
+        name: "Backtrace parameter redaction (PHP.Watch)",
+        url: "https://php.watch/versions/8.2/backtrace-parameter-redaction",
+      },
+    ],
+  },
+  {
     name: "Fibers (Fiber class, Fiber exceptions)",
     description:
       "Lightweight concurrency for PHP. Fibers represent full-stack, interruptible functions. Fibers may be suspended from anywhere in the call-stack, pausing execution within the fiber until the fiber is resumed at a later time.",
