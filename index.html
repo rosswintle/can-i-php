@@ -74,19 +74,19 @@
             type="search"
             name="s"
             placeholder="Search for a PHP feature"
-            class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
+            class="w-full md:w-2/3 mb-6 md:mb-8 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
           />
         </form>
         <p class="mb-2">
             Or view what's changed in a PHP version:
         </p>
-        <ul class="flex w-full justify-center mb-4">
+        <ul class="flex w-full justify-center mb-12">
             <li>
-                <button @click="versionFilter=''" :class="versionFilter === '' ? 'font-bold' : ''">All</button>
+                <button @click="versionFilter=''" class="leading-none px-4 py-2 rounded-md transition" :class="versionFilter === '' ? 'bg-blue-300' : 'bg-gray-200'">All</button>
             </li>
             <template x-for="version in versions">
                 <li>
-                    <button x-text="version.version" @click="versionFilter=version.version" class="ml-4" :class="versionFilter === version.version ? 'font-bold' : ''"></button>
+                    <button x-text="version.version" @click="versionFilter=version.version" class="leading-none px-4 py-2 rounded-md transition ml-4" :class="versionFilter === version.version ? 'bg-blue-300' : 'bg-gray-200'"></button>
                 </li>
             </template>
         </ul>
