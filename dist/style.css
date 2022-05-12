@@ -905,6 +905,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -935,6 +939,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .list-disc {
   list-style-type: disc;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .overflow-auto {

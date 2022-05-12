@@ -77,10 +77,24 @@
             class="w-full md:w-2/3 mb-6 md:mb-16 text-xl md:text-3xl py-4 px-6 border-2 rounded-md"
           />
         </form>
+        <p class="mb-2">
+            Or view what's changed in a PHP version:
+        </p>
+        <ul class="flex w-full justify-center mb-4">
+            <li>
+                <button @click="versionFilter=''" :class="versionFilter === '' ? 'font-bold' : ''">All</button>
+            </li>
+            <template x-for="version in versions">
+                <li>
+                    <button x-text="version.version" @click="versionFilter=version.version" class="ml-4" :class="versionFilter === version.version ? 'font-bold' : ''"></button>
+                </li>
+            </template>
+        </ul>
 
         <div
           class="text-left prose lg:prose-xl"
           x-show="filteredFeatures().length === 0"
+          style="display: none"
         >
           <h3>Nothing matches!</h3>
           <p>It could be that:</p>
@@ -202,6 +216,8 @@
 
             versions: versions,
 
+            versionFilter: '',
+
             init() {
               this.$watch("searchString", (value) => {
                 const url = new URL(window.location.href);
@@ -279,7 +295,7 @@
             },
 
             filteredFeatures() {
-              return this.featuresHaving(this.searchString);
+                return this.changesInVersion(this.versionFilter, this.featuresHaving(this.searchString));
             },
 
             featureMatches(feature, keyword) {
@@ -294,10 +310,18 @@
             },
 
             featuresHaving(featureKeyword) {
-              const versions = features.filter((feature) =>
+              return features.filter((feature) =>
                 this.featureMatches(feature, featureKeyword)
               );
-              return versions;
+            },
+
+            changesInVersion(version, features) {
+                return features.filter((feature) =>
+                    ! version ||
+                    feature.added === version ||
+                    feature.deprecated === version ||
+                    feature.removed === version
+                );
             },
 
             /*
