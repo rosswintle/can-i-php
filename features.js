@@ -361,6 +361,25 @@ const features = [
     ],
   },
   {
+    name: "mixed type",
+    description:
+      "`mixed` is equivalent to the union type `object|resource|array|string|int|float|bool|null`.",
+    keywords: ["declarations", "typehints", "return", "types"],
+    added: "8.0",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "mixed type (php.net)",
+        url: "https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.mixed",
+      },
+      {
+        name: "PHP 8.0: New mixed pseudo type (php.watch)",
+        url: "PHP 8.0: New mixed pseudo type",
+      },
+    ],
+  },
+  {
     name: "Typed properties",
     description: "Class properties now support type declarations.",
     keywords: ["properties", "class", "types", "typehints"],
@@ -523,7 +542,7 @@ const features = [
     name: "void return type",
     description:
       "<code>void</code> is a return type indicating the function does not return a value.",
-    keywords: ["declarations", "typehints", "return"],
+    keywords: ["declarations", "typehints", "return", "types"],
     added: "7.1",
     deprecated: null,
     removed: null,

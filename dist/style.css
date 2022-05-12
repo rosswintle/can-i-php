@@ -953,6 +953,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.bg-amber-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
+}
+
 .bg-green-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
@@ -1055,7 +1060,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 code {
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
   padding-top: 0.25rem;
@@ -1065,8 +1070,8 @@ code {
 }
 
 :root {
-  --color-blue-light: #8892BF;
-  --color-blue-dark: #4F5B93;
+  --color-blue-light: #8892bf;
+  --color-blue-dark: #4f5b93;
   --font: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
