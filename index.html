@@ -221,7 +221,11 @@
             init() {
               this.$watch("searchString", (value) => {
                 const url = new URL(window.location.href);
-                url.searchParams.set("s", value);
+                if (value.length > 0) {
+                    url.searchParams.set("s", value);
+                } else {
+                    url.searchParams.delete("s");
+                }
                 history.replaceState(null, "", url);
               });
             },
