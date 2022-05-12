@@ -209,6 +209,8 @@
 
         const searchParam = url.searchParams.get("s");
 
+        const versionFilter = url.searchParams.get("version");
+
         Alpine.data("features", () => {
           return {
             // searchString: window.location.pathname.slice(1) ?? '',
@@ -216,7 +218,7 @@
 
             versions: versions,
 
-            versionFilter: '',
+            versionFilter: versionFilter ?? "",
 
             init() {
               this.$watch("searchString", (value) => {
@@ -225,6 +227,16 @@
                     url.searchParams.set("s", value);
                 } else {
                     url.searchParams.delete("s");
+                }
+                history.replaceState(null, "", url);
+              });
+
+              this.$watch("versionFilter", (value) => {
+                const url = new URL(window.location.href);
+                if (value.length > 0) {
+                    url.searchParams.set("version", value);
+                } else {
+                    url.searchParams.delete("version");
                 }
                 history.replaceState(null, "", url);
               });
