@@ -13,6 +13,82 @@
  */
 const features = [
   {
+    name: "Read-only classes",
+    description:
+      "Marking a class as read-only will implicitly mark all instance properties of a class as readonly. Furthermore, it will prevent the creation of dynamic properties.",
+    keywords: ["readonly", "classes", "objects"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "(RFC) Readonly classes",
+        url: "https://wiki.php.net/rfc/readonly_classes",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#readonly-classes-rfc",
+      },
+    ],
+  },
+  {
+    name: "null and false as standalone types",
+    description:
+      "null corresponds to PHP's unit type, i.e. the type which holds a single value. false is a literal type of type bool",
+    keywords: ["types", "typehints", "booleans"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "(RFC) Allow null and false as standalone types",
+        url: "https://wiki.php.net/rfc/null-false-standalone-types",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#null-and-false-as-standalone-types-rfc",
+      },
+    ],
+  },
+  {
+    name: "Reset peak memory usage function (memory_reset_peak_usage)",
+    description:
+      "Reset the peak memory usage returned by the <code>memory_get_peak_usage</code> function",
+    keywords: ["memory", "functions", "memory_reset_peak_usage"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "memory_reset_peak_usage (php.net)",
+        url: "https://www.php.net/manual/function.memory-reset-peak-usage.php",
+      },
+      {
+        name: "Backtrace parameter redaction (PHP.Watch)",
+        url: "https://php.watch/versions/8.2/memory_reset_peak_usage",
+      },
+    ],
+  },
+  {
+    name: "Backtrace parameter redaction",
+    description:
+      "Mark parameters as sensitive to exclude them from a backtrace",
+    keywords: ["sensitive", "debugging", "data", "security", "traces"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/redact_parameters_in_back_traces",
+      },
+      {
+        name: "Backtrace parameter redaction (PHP.Watch)",
+        url: "https://php.watch/versions/8.2/backtrace-parameter-redaction",
+      },
+    ],
+  },
+  {
     name: "Fibers (Fiber class, Fiber exceptions)",
     description:
       "Lightweight concurrency for PHP. Fibers represent full-stack, interruptible functions. Fibers may be suspended from anywhere in the call-stack, pausing execution within the fiber until the fiber is resumed at a later time.",
@@ -717,6 +793,60 @@ const features = [
       {
         name: "Filter flags (php.net)",
         url: "https://www.php.net/manual/en/filter.filters.flags.php",
+      },
+    ],
+  },
+  {
+    name: "Dynamic properties",
+    description: "Set values on undeclared class properties",
+    keywords: ["class", "dynamic", "deprecated"],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/deprecate_dynamic_properties",
+      },
+      {
+        name: "Dynamic Properties Deprecated (PHP.Watch)",
+        url: "https://php.watch/versions/8.2/dynamic-properties-deprecated",
+      },
+    ],
+  },
+  {
+    name: "Deprecate ${} string interpolation",
+    description: "`\"${foo}\"` is deprecated in PHP 8.2; `\"{$foo}\"` is still allowed.",
+    keywords: ["dynamic", "variables", "strings", "dollar", "brace"],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/deprecate_dollar_brace_string_interpolation",
+      },
+      {
+        name: "Deprecate ${} string interpolation (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#deprecate-${}-string-interpolation-rfc",
+      },
+    ],
+  },
+  {
+    name: "Deprecate partially supported callables",
+    description: "deprecate callables that are supported by `call_user_func($callable)`, but not by `$callable()` - read the resources!",
+    keywords: [],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/deprecate_partially_supported_callables",
+      },
+      {
+        name: "Deprecate partially supported callables (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#deprecate-partially-supported-callables-rfc",
       },
     ],
   },
