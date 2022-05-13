@@ -80,13 +80,13 @@
         <p class="mb-2">
             Or view what's changed in a PHP version:
         </p>
-        <ul class="flex w-full justify-center mb-12">
+        <ul class="flex flex-wrap w-full justify-center mb-12">
             <li>
-                <button @click="versionFilter=''" class="leading-none px-4 py-2 rounded-md transition" :class="versionFilter === '' ? 'bg-blue-300' : 'bg-gray-200'">All</button>
+                <button @click="versionFilter=''" class="leading-none mb-4 px-4 py-2 rounded-md transition" :class="versionFilter === '' ? 'bg-blue-300' : 'bg-gray-200'">All</button>
             </li>
             <template x-for="version in versions">
                 <li>
-                    <button x-text="version.version" @click="versionFilter=version.version" class="leading-none px-4 py-2 rounded-md transition ml-4" :class="versionFilter === version.version ? 'bg-blue-300' : 'bg-gray-200'"></button>
+                    <button x-text="version.version" @click="versionFilter=version.version" class="leading-none mb-4 px-4 py-2 rounded-md transition ml-4" :class="versionFilter === version.version ? 'bg-blue-300' : 'bg-gray-200'"></button>
                 </li>
             </template>
         </ul>
