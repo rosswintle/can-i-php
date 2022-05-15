@@ -592,6 +592,21 @@ const features = [
     ],
   },
   {
+    name: "Iterables / iterable pseudo-type",
+    description:
+      "`iterable` is a pseudo-type introduced in PHP 7.1. It accepts any array or object implementing the Traversable interface. Both of these types are iterable using foreach and can be used with yield from within a generator.",
+    keywords: ["declarations", "typehints", "types", "arrays", "iterators", "traversable"],
+    added: "7.1",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Iterables (php.net)",
+        url: "https://www.php.net/manual/en/language.types.iterable.php",
+      },
+    ],
+  },
+  {
     name: "Group use declarations",
     description:
       "Classes, functions and constants being imported from the same namespace can be grouped together in a single use statement.",
