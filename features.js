@@ -494,6 +494,36 @@ const features = [
     ],
   },
   {
+    name: "array_key_first()",
+    description:
+      'Gets the first key of an array',
+    keywords: ["arrays", "functions", "helpers"],
+    added: "7.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "array_key_first (php.net)",
+        url: "https://www.php.net/manual/en/function.array-key-first.php",
+      },
+    ],
+  },
+  {
+    name: "array_key_last()",
+    description:
+      'Gets the last key of an array',
+    keywords: ["arrays", "functions", "helpers"],
+    added: "7.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "array_key_last (php.net)",
+        url: "https://www.php.net/manual/en/function.array-key-last.php",
+      },
+    ],
+  },
+  {
     name: "Underscore as numeric separator",
     description:
       'An underscore "<code>_</code>" can be used in numeric literals to visually separate groups of digits.',
