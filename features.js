@@ -447,21 +447,6 @@ const features = [
     ],
   },
   {
-    name: "Anonymous classes",
-    description:
-      "Anonymous classes can be created with <code>new class</code>. They're used for throw away objects.",
-    keywords: ["closures", "anonymous", "class"],
-    added: "7.0",
-    deprecated: null,
-    removed: null,
-    resources: [
-      {
-        name: "Anonymous classes (php.net)",
-        url: "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.anonymous-classes",
-      },
-    ],
-  },
-  {
     name: "Array unpacking (numeric keys only)",
     description: "e.g. <code>$result = [0, …$arrayA, …$arrayB, 6, 7];</code>",
     keywords: ["spread", "unpacking", "arrays", "deconstruct"],
@@ -494,6 +479,25 @@ const features = [
     ],
   },
   {
+    name: "Underscore as numeric separator",
+    description:
+      'An underscore "<code>_</code>" can be used in numeric literals to visually separate groups of digits.',
+    keywords: ["numbers", "underscore", "literals"],
+    added: "7.4",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Integers (php.net)",
+        url: "https://www.php.net/manual/en/language.types.integer.php",
+      },
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/numeric_literal_separator",
+      },
+    ],
+  },
+  {
     name: "array_key_first()",
     description:
       'Gets the first key of an array',
@@ -520,59 +524,6 @@ const features = [
       {
         name: "array_key_last (php.net)",
         url: "https://www.php.net/manual/en/function.array-key-last.php",
-      },
-    ],
-  },
-  {
-    name: "Underscore as numeric separator",
-    description:
-      'An underscore "<code>_</code>" can be used in numeric literals to visually separate groups of digits.',
-    keywords: ["numbers", "underscore", "literals"],
-    added: "7.4",
-    deprecated: null,
-    removed: null,
-    resources: [
-      {
-        name: "Integers (php.net)",
-        url: "https://www.php.net/manual/en/language.types.integer.php",
-      },
-      {
-        name: "RFC (php.net)",
-        url: "https://wiki.php.net/rfc/numeric_literal_separator",
-      },
-    ],
-  },
-  {
-    name: "Filtered unserialize()",
-    description:
-      'Filtered unserialize allows developers to specify which classes they expect data to unserialize into. For example: <code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>. This improves security greatly when using PHP serialization.',
-    keywords: ["unserialize", "security", "serialize"],
-    added: "7.0",
-    deprecated: null,
-    removed: null,
-    resources: [
-      {
-        name: "PHP 7 New features page (php.net)",
-        url: "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.filtered-unserialize",
-      },
-      {
-        name: "Unserialize manual page (php.net)",
-        url: "https://www.php.net/manual/en/function.unserialize.php",
-      },
-    ],
-  },
-  {
-    name: "Splat operator / argument unpacking (... operator)",
-    description:
-      "The ... operator, aka the splat operator or array unpacking operator",
-    keywords: ["spread", "unpacking", "arrays", "splat"],
-    added: "5.6",
-    deprecated: null,
-    removed: null,
-    resources: [
-      {
-        name: "Argument unpacking via ...",
-        url: "https://www.php.net/manual/en/migration56.new-features.php#migration56.new-features.splat",
       },
     ],
   },
@@ -633,6 +584,40 @@ const features = [
       {
         name: "Iterables (php.net)",
         url: "https://www.php.net/manual/en/language.types.iterable.php",
+      },
+    ],
+  },
+  {
+    name: "Anonymous classes",
+    description:
+      "Anonymous classes can be created with <code>new class</code>. They're used for throw away objects.",
+    keywords: ["closures", "anonymous", "class"],
+    added: "7.0",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Anonymous classes (php.net)",
+        url: "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.anonymous-classes",
+      },
+    ],
+  },
+  {
+    name: "Filtered unserialize()",
+    description:
+      'Filtered unserialize allows developers to specify which classes they expect data to unserialize into. For example: <code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>. This improves security greatly when using PHP serialization.',
+    keywords: ["unserialize", "security", "serialize"],
+    added: "7.0",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP 7 New features page (php.net)",
+        url: "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.filtered-unserialize",
+      },
+      {
+        name: "Unserialize manual page (php.net)",
+        url: "https://www.php.net/manual/en/function.unserialize.php",
       },
     ],
   },
@@ -758,6 +743,21 @@ const features = [
       {
         name: "random_bytes (php.net)",
         url: "https://www.php.net/manual/en/function.random-bytes.php",
+      },
+    ],
+  },
+  {
+    name: "Splat operator / argument unpacking (... operator)",
+    description:
+      "The ... operator, aka the splat operator or array unpacking operator",
+    keywords: ["spread", "unpacking", "arrays", "splat"],
+    added: "5.6",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Argument unpacking via ...",
+        url: "https://www.php.net/manual/en/migration56.new-features.php#migration56.new-features.splat",
       },
     ],
   },
