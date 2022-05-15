@@ -68,7 +68,11 @@ PHP features are listed in `features.js`. This file is ordered by PHP version (s
 - the whole thing is a JSON array
 - each entry is an object with the following properties:
   - `name`: The name of the feature - plain text only
-  - `description`: A description of the feature - HTML is allowed, but may not be styled. `<code>` tags are fine and backticks will be converted to code tags.
+  - `description`: A description of the feature - HTML is allowed, but may not be styled. Some BASIC Markdown is allowed. It's recommended to use template literals
+  rather than string literals to preserve line breaks.
+     - `<code>` tags are fine and backticks will be converted to code tags.
+     - single line breaks will be converted to `<br>` tags.
+     - double line breaks will be converted to `<p></p>` elements.
   - `keywords`: An array of strings. These are used when searching, so add strings that people may use to search for this feature.
   - `added`: A string for the version of PHP that the feature was added. Must be in the format `X.Y`, e.g. `7.0`. Use `0.0` if this is not known or appropriate.
   - `deprecated`: A string for the version of PHP that the feature was deprecated. Must be in the format `X.Y`, e.g. `8.0`. Use `null` if this is not know or appropriate.
@@ -82,7 +86,7 @@ A sample entry:
 ```
     {
         name: 'Spaceship operator',
-        description: 'Use <code><=></code> for comparisons for sorting',
+        description: `Use <code><=></code> for comparisons for sorting`,
         keywords: [
             'short', 'shorthand', 'spaceship', 'space ship', 'comparisons', 'operators', 'sorting'
         ],

@@ -325,7 +325,9 @@ const features = [
   {
     name: "Nullsafe operator",
     description:
-      "Nullsafe operator allows you to access properties and methods of nullable objects. e.g. <code>$country = $session?->user?->getAddress()?->country;</code>",
+      `Nullsafe operator allows you to access properties and methods of nullable objects.
+
+      e.g. \`$country = $session?->user?->getAddress()?->country;</$country>\``,
     keywords: ["null"],
     added: "8.0",
     deprecated: null,
@@ -434,7 +436,9 @@ const features = [
   {
     name: "Arrow functions",
     description:
-      "Arrow functions are a shorthand for anonymous functions: <code>fn (argument_list) => expr</code>.",
+      `Arrow functions are a shorthand for anonymous functions:
+
+      <code>fn (argument_list) => expr</code>.`,
     keywords: ["closures", "anonymous", "shorthand", "short"],
     added: "7.4",
     deprecated: null,
@@ -605,7 +609,12 @@ const features = [
   {
     name: "Filtered unserialize()",
     description:
-      'Filtered unserialize allows developers to specify which classes they expect data to unserialize into. For example: <code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>. This improves security greatly when using PHP serialization.',
+      `Filtered unserialize allows developers to specify which classes they expect data to unserialize into.
+
+      For example:
+      <code>$data = unserialize($foo, ["allowed_classes" => ["MyClass", "MyClass2"]]);</code>.
+
+      This improves security greatly when using PHP serialization.`,
     keywords: ["unserialize", "security", "serialize"],
     added: "7.0",
     deprecated: null,
@@ -749,7 +758,7 @@ const features = [
   {
     name: "Splat operator / argument unpacking (... operator)",
     description:
-      "The ... operator, aka the splat operator or array unpacking operator",
+      "The `...` operator, aka the splat operator or array unpacking operator",
     keywords: ["spread", "unpacking", "arrays", "splat"],
     added: "5.6",
     deprecated: null,

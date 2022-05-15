@@ -346,8 +346,14 @@
              *  - backticks are converted to <code></code>
              */
             formatAsHtml(rawString) {
-              htmlString = rawString.replace(/`(.*?)`/g, "<code>$1</code>");
-              return htmlString;
+                // Code blocks denoted by backticks
+                tempString = rawString.replace(/`([\s\S]*?)`/g, "<code>$1</code>");
+                // Change double newlines to pararaphs
+                tempString = tempString.replace(/(?:[\r\n|\r|\n]{2})/g, '</p><p class="mb-4">');
+                // Change single newlines to line breaks
+                tempString = tempString.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                // Wrap the outer with paragraphs
+                return '<p class="mb-4">' + tempString + '</p>';
             },
           };
         });
