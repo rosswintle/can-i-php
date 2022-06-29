@@ -240,7 +240,7 @@ const features = [
   {
     name: "Attributes",
     description:
-      "Attributes, also known as annotations in many other languages, can be used to add meta data to classes, methods, variables and what not; in a structured way. Like docblocks, but recognised properly by PHP.",
+      "Attributes, also known as annotations in many other languages, can be used to add metadata to classes, methods, variables and what not; in a structured way. Like docblocks, but recognised properly by PHP.",
     keywords: [
       "annotations",
       "docblocks",
