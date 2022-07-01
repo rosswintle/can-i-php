@@ -428,6 +428,10 @@ const features = [
     removed: null,
     resources: [
       {
+        name: "Property type declarations (php.net)",
+        url: "https://www.php.net/manual/en/language.oop5.properties.php#language.oop5.properties.typed-properties",
+      },
+      {
         name: "Typed properties in PHP 7.4 (stitcher.io)",
         url: "https://stitcher.io/blog/typed-properties-in-php-74",
       },
