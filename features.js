@@ -536,6 +536,269 @@ const features = [
     ],
   },
   {
+    name: "Password hashing with Argon2",
+    description:
+      "Argon2 has been added to the password hashing API  where the following constants have been exposed:<p> <ol><li>PASSWORD_ARGON2I<li>PASSWORD_ARGON2_DEFAULT_MEMORY_COST</li><li>PASSWORD_ARGON2_DEFAULT_TIME_COST</li><li>PASSWORD_ARGON2_DEFAULT_THREADS</li>",
+    keywords: ["password", "argon2"],
+    added: "7.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Password Hashing API (php.net)",
+        url: "https://www.php.net/manual/en/book.password.php",
+      },
+    ],
+  },
+  {
+    name: "Extended string types for PDO",
+    description:
+      "PDO's string type has been extended to support the national character type when emulating prepares. This has been done with the following constants:<ol> <li>PDO::PARAM_STR_NATL</li><li>PDO::PARAM_STR_CHAR</li><li>PDO::ATTR_DEFAULT_STR_PARAM</li></ol>",
+    keywords: ["pdo"],
+    added: "7.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP Data Objects (php.net)",
+        url: "https://www.php.net/manual/en/book.pdo.php",
+      },
+    ],
+  },
+  {
+    name: "PDOStatement::debugDumpParams method updated to include SQL sent",
+    description:
+      "The PDOStatement::debugDumpParams() method has been updated to include the SQL being sent to the DB, where the full, raw query (including the replaced placeholders with their bounded values) will be shown. This has been added to aid with debugging emulated prepares.",
+    keywords: ["pdo"],
+    added: "7.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PDOStatement::debugDumpParams",
+        url: "https://www.php.net/manual/en/pdostatement.debugdumpparams.php",
+      },
+    ],
+  },
+  {
+    name: "Unquoted strings",
+    description: " Unquoted strings that are non-existent global constants are taken to be strings of themselves. This behaviour used to emit an E_NOTICE, but will now emit an E_WARNING. In the next major version of PHP, an Error exception will be thrown instead.",
+    keywords: ["functions", "deprecated", "removed"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "PHP RFC: Deprecate and Remove Bareword (Unquoted) Strings",
+        url: "https://wiki.php.net/rfc/deprecate-bareword-strings",
+      },
+    ],
+  },
+  {
+    name: "png2wbmp",
+    description: "png2wbmp — Convert PNG image file to WBMP image file",
+    keywords: ["functions", "deprecated", "removed"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "png2wbmp (php.net)",
+        url: "https://www.php.net/manual/en/function.png2wbmp.php",
+      },
+    ],
+  },
+  {
+    name: "jpeg2wbmp",
+    description: "jpeg2wbmp — Convert JPEG image file to WBMP image file",
+    keywords: ["functions", "deprecated", "removed"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "jpeg2wbmp (php.net)",
+        url: "https://www.php.net/manual/en/function.png2wbmp.php",
+      },
+    ],
+  },
+  {
+    name: "INTL_IDNA_VARIANT_2003 variant",
+    description: "The Intl extension has deprecated the INTL_IDNA_VARIANT_2003 variant, which is currently being used as the default for idn_to_ascii() and idn_to_utf8().",
+    keywords: ["functions", "deprecated", "removed", "idn_to_ascii", "idn_to_utf8"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "INTL_IDNA_VARIANT_2003 variant",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.INTL_IDNA_VARIANT_2003-variant",
+      },
+    ],
+  },
+  {
+    name: "__autoload function",
+    description: "The __autoload() method has been deprecated because it is inferior to spl_autoload_register() (due to it not being able to chain autoloaders), and there is no interoperability between the two autoloading styles.",
+    keywords: ["functions", "deprecated", "removed", "__autoload", "spl_autoload_register"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "__autoload function",
+        url: "https://www.php.net/manual/en/function.autoload.php",
+      },
+    ],
+  },
+  {
+    name: "track_errors ini setting and $php_errormsg variable",
+    description: "When the track_errors ini setting is enabled, a $php_errormsg variable is created in the local scope when a non-fatal error occurs. Given that the preferred way of retrieving such error information is by using error_get_last(), this feature has been deprecated.",
+    keywords: ["functions", "deprecated", "removed", "track_errors", "php_errormsg"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "Deprecation notice",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.track_errors-and-php_errormsg",
+      },
+    ],
+  },
+  {
+    name: "create_function function",
+    description: "Given the security issues of this function (being a thin wrapper around eval()), this dated function has now been deprecated. The preferred alternative is to use anonymous functions.",
+    keywords: ["functions", "deprecated", "removed", "create_function", "eval"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "create_function",
+        url: "https://www.php.net/manual/en/function.create-function.php",
+      },
+    ],
+  },
+  {
+    name: "mbstring.func_overload ini setting",
+    description: "Given the interoperability problems of string-based functions being used in environments with this setting enabled, it has now been deprecated.",
+    keywords: ["functions", "deprecated", "removed", "mbstring"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "Deprecation notice",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.mbstringfunc_overload-ini-setting",
+      },
+    ],
+  },
+  {
+    name: "(uncast) cast",
+    description: "Casting any expression to this type will always result in null, and so this superfluous casting type has now been deprecated.",
+    keywords: ["functions", "deprecated", "removed", "uncast"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "Deprecation notice",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.unset-cast",
+      },
+    ],
+  },
+  {
+    name: "parse_str() without a second argument",
+    description: "Without the second argument to parse_str(), the query string parameters would populate the local symbol table. Given the security implications of this, using parse_str() without a second argument has now been deprecated. The function should always be used with two arguments, as the second argument causes the query string to be parsed into an array.",
+    keywords: ["functions", "deprecated", "removed", "parse_str"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "parse_str",
+        url: "https://www.php.net/manual/en/function.parse-str.php",
+      },
+      {
+        name: "Deprecation notice",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.parse_str-no-second-arg",
+      },
+    ],
+  },
+  {
+    name: "gmp_random() function",
+    description: "This function generates a random number based upon a range that is calculated by an unexposed, platform-specific limb size. Because of this, the function has now been deprecated. The preferred way of generating a random number using the GMP extension is by gmp_random_bits() and gmp_random_range().",
+    keywords: ["functions", "deprecated", "removed", "gmp_random", "gmp_random_bits", "gmp_random_range"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "gmp_random",
+        url: "https://www.php.net/manual/en/function.gmp-random.php",
+      },
+      {
+        name: "Deprecation notice",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.gmp_random-function",
+      },
+    ],
+  },
+  {
+    name: "each() function",
+    description: "This function is far slower at iteration than a normal foreach, and causes implementation issues for some language changes. It has therefore been deprecated.",
+    keywords: ["functions", "deprecated", "removed", "each"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "each",
+        url: "https://www.php.net/manual/en/function.each.php",
+      },
+    ],
+  },
+  {
+    name: "assert() with a string argument",
+    description: "Using assert() with a string argument required the string to be eval()'ed. Given the potential for remote code execution, using assert() with a string argument has now been deprecated in favour of using boolean expressions.",
+    keywords: ["functions", "deprecated", "removed", "assert"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "assert",
+        url: "https://www.php.net/manual/en/function.assert.php",
+      },
+    ],
+  },
+  {
+    name: "$errcontext argument of error handlers",
+    description: "The $errcontext argument contains all local variables of the error site. Given its rare usage, and the problems it causes with internal optimisations, it has now been deprecated. Instead, a debugger should be used to retrieve information on local variables at the error site.",
+    keywords: ["functions", "deprecated", "removed", "assert"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "Deprecation notice",
+        url: "https://www.php.net/manual/en/migration72.deprecated.php#migration72.deprecated.errcontext-arg-of-error-handlers",
+      },
+    ],
+  },
+  {
+    name: "read_exif_data() function",
+    description: "The read_exif_data() alias has been deprecated. The exif_read_data() function should be used instead.",
+    keywords: ["functions", "deprecated", "removed", "read_exif_data", "exif_read_data"],
+    added: "0.0",
+    deprecated: "7.2",
+    removed: "8.0",
+    resources: [
+      {
+        name: "read_exif_data",
+        url: "https://www.php.net/manual/en/function.read-exif-data.php",
+      },
+    ],
+  },
+  {
     name: "Multi catch exception handling",
     description:
       "A catch block may specify multiple exceptions using the pipe (|) character",
