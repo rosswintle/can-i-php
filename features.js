@@ -791,8 +791,8 @@ const features = [
   },
   {
     name: "Exponential operators ** and **=",
-    description: "A right associative <code>** operator has been added to support exponentiation, along with a </code>**=</code> shorthand assignment operator.",
-    keywords: ["exponent", "exponentiation", "power", "pow"],
+    description: "A right associative <code>**</code> operator has been added to support exponentiation, along with a <code>**=</code> shorthand assignment operator.",
+    keywords: ["exponent", "exponentiation", "power", "pow", "math", "operators"],
     added: "5.6",
     deprecated: null,
     removed: null,
