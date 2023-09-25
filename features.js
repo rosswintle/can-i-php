@@ -760,6 +760,21 @@ const features = [
     ],
   },
   {
+    name: "Variadic functions / methods (... operator)",
+    description:
+      "Variadic functions can now be implemented using the `...` operator, instead of relying on `func_get_args()`.",
+    keywords: ["variadic", "argument", "parameter"],
+    added: "5.6",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Variadic functions via ...",
+        url: "https://www.php.net/manual/en/migration56.new-features.php#migration56.new-features.variadics",
+      },
+    ],
+  },
+  {
     name: "Splat operator / argument unpacking (... operator)",
     description:
       "The `...` operator, aka the splat operator or array unpacking operator",
@@ -771,6 +786,20 @@ const features = [
       {
         name: "Argument unpacking via ...",
         url: "https://www.php.net/manual/en/migration56.new-features.php#migration56.new-features.splat",
+      },
+    ],
+  },
+  {
+    name: "Exponential operators ** and **=",
+    description: "A right associative <code>**</code> operator has been added to support exponentiation, along with a <code>**=</code> shorthand assignment operator.",
+    keywords: ["exponent", "exponentiation", "power", "pow", "math", "operators"],
+    added: "5.6",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Exponentiation via **",
+        url: "https://www.php.net/manual/en/migration56.new-features.php#migration56.new-features.exponentiation",
       },
     ],
   },
