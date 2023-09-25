@@ -762,7 +762,7 @@ const features = [
   {
     name: "Variadic functions / methods (... operator)",
     description:
-      "Variadic functions can now be implemented using the <code>...</code> operator, instead of relying on `func_get_args()`.",
+      "Variadic functions can now be implemented using the `...` operator, instead of relying on `func_get_args()`.",
     keywords: ["variadic", "argument", "parameter"],
     added: "5.6",
     deprecated: null,
@@ -777,7 +777,7 @@ const features = [
   {
     name: "Splat operator / argument unpacking (... operator)",
     description:
-      "The <code>...</code> operator, aka the splat operator or array unpacking operator",
+      "The `...` operator, aka the splat operator or array unpacking operator",
     keywords: ["spread", "unpacking", "arrays", "splat"],
     added: "5.6",
     deprecated: null,
