@@ -536,6 +536,25 @@ const features = [
     ],
   },
   {
+    name: "object type",
+    description:
+      "`object` is a generic type accepting any object.",
+    keywords: ["declarations", "typehints", "object", "return", "types"],
+    added: "7.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "object type (php.net)",
+        url: "https://www.php.net/manual/en/language.types.declarations.php",
+      },
+      {
+        name: "object parameter and return type",
+        url: "https://kinsta.com/blog/php-7-2/#object-return-type-declarations",
+      },
+    ],
+  },
+  {
     name: "Multi catch exception handling",
     description:
       "A catch block may specify multiple exceptions using the pipe (|) character",
