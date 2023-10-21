@@ -538,8 +538,8 @@ const features = [
   {
     name: "object type",
     description:
-      "`object` is a generic type accepting any object.",
-    keywords: ["declarations", "typehints", "object", "return", "types"],
+      "`object` is a generic type accepting any object. It can be used in both parameter and return types.",
+    keywords: ["declarations", "typehints", "object", "return", "types", "parameters"],
     added: "7.2",
     deprecated: null,
     removed: null,
@@ -550,7 +550,7 @@ const features = [
       },
       {
         name: "object parameter and return type",
-        url: "https://kinsta.com/blog/php-7-2/#object-return-type-declarations",
+        url: "https://kinsta.com/blog/php-7-2/#argument-type-declarations",
       },
     ],
   },
