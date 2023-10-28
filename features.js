@@ -13,6 +13,263 @@
  */
 const features = [
   {
+    name: "openssl_cipher_key_length",
+    description:
+      "Gets the cipher key length",
+    keywords: ["openssl", "encryption", "security", "ssl"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: openssl_cipher_key_length",
+        url: "https://www.php.net/manual/en/function.openssl-cipher-key-length.php",
+      }
+    ],
+  },
+  {
+    name: "sodium_crypto_stream_xchacha20_xor_ic",
+    description:
+      "Encrypts a message using a nonce and a secret key (no authentication)",
+    keywords: ["sodium", "encryption", "security", "crypto", "cryptography"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: sodium_crypto_stream_xchacha20_xor_ic",
+        url: "https://www.php.net/manual/en/function.sodium-crypto-stream-xchacha20-xor-ic.php",
+      }
+    ],
+  },
+  {
+    name: "libxml_get_external_entity_loader",
+    description:
+      "Get external entity loader previously installed by libxml_set_external_entity_loader().",
+    keywords: ["xml"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: libxml_get_external_entity_loader",
+        url: "https://www.php.net/manual/en/function.libxml-get-external-entity-loader.php",
+      }
+    ],
+  },
+  {
+    name: "libxml_get_external_entity_loader",
+    description:
+      "Get external entity loader previously installed by libxml_set_external_entity_loader().",
+    keywords: ["xml"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: libxml_get_external_entity_loader",
+        url: "https://www.php.net/manual/en/function.libxml-get-external-entity-loader.php",
+      }
+    ],
+  },
+  {
+    name: "ini_parse_quantity",
+    description:
+      "Returns the interpreted size in bytes on success from an ini shorthand.",
+    keywords: ["ini", "php.ini"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ini_parse_quantity",
+        url: "https://www.php.net/manual/en/function.ini-parse-quantity.php",
+      }
+    ],
+  },
+  {
+    name: "curl_upkeep",
+    description:
+      "Performs any connection upkeep checks.",
+    keywords: ["curl", "connection", "http"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: curl_upkeep",
+        url: "https://www.php.net/manual/en/function.curl_upkeep.php",
+      }
+    ],
+  },
+  {
+    name: "ReflectionMethod::hasPrototype",
+    description:
+      "Returns whether a method has a prototype.",
+    keywords: ["reflection", "functions", "methods"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ReflectionMethod::hasPrototype",
+        url: "https://www.php.net/manual/en/reflectionmethod.hasprototype.php",
+      }
+    ],
+  },
+  {
+    name: "ReflectionFunction::isAnonymous",
+    description:
+      "Checks if a function is anonymous.",
+    keywords: ["reflection", "functions"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ReflectionFunction::isAnonymous",
+        url: "https://www.php.net/manual/en/reflectionfunction.isanonymous.php",
+      }
+    ],
+  },
+  {
+    name: "ZipArchive::clearError",
+    description:
+      "Clear the status error message, system and/or zip messages",
+    keywords: ["zip", "errors"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ZipArchive::clearError",
+        url: "https://www.php.net/manual/en/ziparchive.clearerror.php",
+      }
+    ],
+  },
+  {
+    name: "ZipArchive::getStreamName",
+    description:
+      "Get a file handler to the entry defined by its name.",
+    keywords: ["zip", "streams"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ZipArchive::getStreamName",
+        url: "https://www.php.net/manual/en/ziparchive.getstreamname.php",
+      }
+    ],
+  },
+  {
+    name: "ZipArchive::getStreamIndex",
+    description:
+      "Get a file handler to the entry defined by its index.",
+    keywords: ["zip", "streams"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ZipArchive::getStreamIndex",
+        url: "https://www.php.net/manual/en/ziparchive.getstreamindex.php",
+      }
+    ],
+  },
+  {
+    name: "New mysqli_execute_query function and mysqli::execute_query method.",
+    description:
+      "In PHP 8.2, the MySQLi extension provides a more straight-forward approach to prepare, bind, execute, and retrieve results from SQL.",
+    keywords: ["mysql", "mysqli", "extensions", "database"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: mysqli_execute_query",
+        url: "https://www.php.net/manual/en/mysqli.execute-query.php",
+      },
+      {
+        name: "PHP Watch",
+        url: "https://php.watch/versions/8.2/mysqli_execute_query",
+      }
+    ],
+  },
+  {
+    name: "Constants in traits",
+    description:
+      "You can now use constants in traits.",
+    keywords: ["constants", "const", "traits", "classes"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#constants_in_traits",
+      },
+      {
+        name: "(RFC) Constants in Traits",
+        url: "https://wiki.php.net/rfc/constants_in_traits",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#constants-in-traits-rfc",
+      },
+    ],
+  },
+  {
+    name: "New 'Random' extension",
+    description:
+      "a new random number generator that fixes a lot of problems with the previous one.",
+    keywords: ["random", "randomizer", "rng", "number", "numbers"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#random_extension",
+      },
+      {
+        name: "(RFC) Random Extension 5.x",
+        url: "https://wiki.php.net/rfc/rng_extension",
+      },
+      {
+        name: "(RFC) Random Extension Improvement",
+        url: "https://wiki.php.net/rfc/random_extension_improvement",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#new-random-extension-rfc",
+      },
+    ],
+  },
+  {
+    name: "Disjunctive Normal Form types",
+    description:
+      "DNF types allow us to combine union and intersection types. Intersection types must be grouped with brackets. e.g. `(HasTitle&HasId)|null`",
+    keywords: ["types", "typehints"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#dnf_types",
+      },
+      {
+        name: "(RFC) Disjunctive Normal Form Types",
+        url: "https://wiki.php.net/rfc/dnf_types",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#disjunctive-normal-form-types-rfc",
+      },
+    ],
+  },
+  {
     name: "Read-only classes",
     description:
       "Marking a class as read-only will implicitly mark all instance properties of a class as readonly. Furthermore, it will prevent the creation of dynamic properties.",
@@ -21,6 +278,10 @@ const features = [
     deprecated: null,
     removed: null,
     resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#dnf_types",
+      },
       {
         name: "(RFC) Readonly classes",
         url: "https://wiki.php.net/rfc/readonly_classes",
@@ -32,7 +293,7 @@ const features = [
     ],
   },
   {
-    name: "null and false as standalone types",
+    name: "null, true and false as standalone types",
     description:
       "null corresponds to PHP's unit type, i.e. the type which holds a single value. false is a literal type of type bool",
     keywords: ["types", "typehints", "booleans"],
@@ -41,8 +302,16 @@ const features = [
     removed: null,
     resources: [
       {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#null_false_true_types",
+      },
+      {
         name: "(RFC) Allow null and false as standalone types",
         url: "https://wiki.php.net/rfc/null-false-standalone-types",
+      },
+      {
+        name: "(RFC) Add true type",
+        url: "https://wiki.php.net/rfc/true-type",
       },
       {
         name: "What's new in PHP 8.2 (stitcher.io)",
@@ -64,16 +333,16 @@ const features = [
         url: "https://www.php.net/manual/function.memory-reset-peak-usage.php",
       },
       {
-        name: "Backtrace parameter redaction (PHP.Watch)",
-        url: "https://php.watch/versions/8.2/memory_reset_peak_usage",
+        name: "Reset recorded peak memory usage: memory_reset_peak_usage",
+        url: "https://php.watch/versions/8.2#memory_reset_peak_usage",
       },
     ],
   },
   {
-    name: "Backtrace parameter redaction",
+    name: "Backtrace parameter redaction / New SensitiveParameter attribute",
     description:
-      "Mark parameters as sensitive to exclude them from a backtrace",
-    keywords: ["sensitive", "debugging", "data", "security", "traces"],
+      "Mark parameters as sensitive to exclude them from a backtrace using the new `#[\\SensitiveParameter]` attribute",
+    keywords: ["sensitive", "debugging", "data", "security", "traces", "parameter", "attribute"],
     added: "8.2",
     deprecated: null,
     removed: null,
@@ -911,6 +1180,10 @@ const features = [
     removed: "9.0",
     resources: [
       {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#deprecate_dynamic_properties",
+      },
+      {
         name: "RFC (php.net)",
         url: "https://wiki.php.net/rfc/deprecate_dynamic_properties",
       },
@@ -953,6 +1226,42 @@ const features = [
       {
         name: "Deprecate partially supported callables (stitcher.io)",
         url: "https://stitcher.io/blog/new-in-php-82#deprecate-partially-supported-callables-rfc",
+      },
+    ],
+  },
+  {
+    name: "utf8_encode (deprecated)",
+    description: "utf8_encode and utf8_decode Functions Deprecated - The RFC suggests using mb_convert_encoding() instead.",
+    keywords: ["encode", "encoding", "utf8", "deprecations"],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode",
+      },
+      {
+        name: "utf8_encode() and utf8_decode() deprecations (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#utf8_encode()-and-utf8_decode()-deprecations-rfc",
+      },
+    ],
+  },
+  {
+    name: "utf8_decode (deprecated)",
+    description: "utf8_encode and utf8_decode Functions Deprecated - The RFC suggests using mb_convert_encoding() instead.",
+    keywords: ["decode", "decoding", "utf8", "deprecations"],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode",
+      },
+      {
+        name: "utf8_encode() and utf8_decode() deprecations (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#utf8_encode()-and-utf8_decode()-deprecations-rfc",
       },
     ],
   },
