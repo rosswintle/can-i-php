@@ -13,6 +13,25 @@
  */
 const features = [
   {
+    name: "New mysqli_execute_query function and mysqli::execute_query method.",
+    description:
+      "In PHP 8.2, the MySQLi extension provides a more straight-forward approach to prepare, bind, execute, and retrieve results from SQL.",
+    keywords: ["mysql", "mysqli", "extensions", "database"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: mysqli_execute_query",
+        url: "https://www.php.net/manual/en/mysqli.execute-query.php",
+      },
+      {
+        name: "PHP Watch",
+        url: "https://php.watch/versions/8.2/mysqli_execute_query",
+      }
+    ],
+  },
+  {
     name: "Constants in traits",
     description:
       "You can now use constants in traits.",
@@ -155,10 +174,10 @@ const features = [
     ],
   },
   {
-    name: "Backtrace parameter redaction",
+    name: "Backtrace parameter redaction / New SensitiveParameter attribute",
     description:
-      "Mark parameters as sensitive to exclude them from a backtrace",
-    keywords: ["sensitive", "debugging", "data", "security", "traces"],
+      "Mark parameters as sensitive to exclude them from a backtrace using the new `#[\\SensitiveParameter]` attribute",
+    keywords: ["sensitive", "debugging", "data", "security", "traces", "parameter", "attribute"],
     added: "8.2",
     deprecated: null,
     removed: null,
