@@ -13,6 +13,96 @@
  */
 const features = [
   {
+    name: "openssl_cipher_key_length",
+    description:
+      "Gets the cipher key length",
+    keywords: ["openssl", "encryption", "security", "ssl"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: openssl_cipher_key_length",
+        url: "https://www.php.net/manual/en/function.openssl-cipher-key-length.php",
+      }
+    ],
+  },
+  {
+    name: "sodium_crypto_stream_xchacha20_xor_ic",
+    description:
+      "Encrypts a message using a nonce and a secret key (no authentication)",
+    keywords: ["sodium", "encryption", "security", "crypto", "cryptography"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: sodium_crypto_stream_xchacha20_xor_ic",
+        url: "https://www.php.net/manual/en/function.sodium-crypto-stream-xchacha20-xor-ic.php",
+      }
+    ],
+  },
+  {
+    name: "libxml_get_external_entity_loader",
+    description:
+      "Get external entity loader previously installed by libxml_set_external_entity_loader().",
+    keywords: ["xml"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: libxml_get_external_entity_loader",
+        url: "https://www.php.net/manual/en/function.libxml-get-external-entity-loader.php",
+      }
+    ],
+  },
+  {
+    name: "libxml_get_external_entity_loader",
+    description:
+      "Get external entity loader previously installed by libxml_set_external_entity_loader().",
+    keywords: ["xml"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: libxml_get_external_entity_loader",
+        url: "https://www.php.net/manual/en/function.libxml-get-external-entity-loader.php",
+      }
+    ],
+  },
+  {
+    name: "ini_parse_quantity",
+    description:
+      "Returns the interpreted size in bytes on success from an ini shorthand.",
+    keywords: ["ini", "php.ini"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ini_parse_quantity",
+        url: "https://www.php.net/manual/en/function.ini-parse-quantity.php",
+      }
+    ],
+  },
+  {
+    name: "curl_upkeep",
+    description:
+      "Performs any connection upkeep checks.",
+    keywords: ["curl", "connection", "http"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: curl_upkeep",
+        url: "https://www.php.net/manual/en/function.curl_upkeep.php",
+      }
+    ],
+  },
+  {
     name: "ReflectionMethod::hasPrototype",
     description:
       "Returns whether a method has a prototype.",
