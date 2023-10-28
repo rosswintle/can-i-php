@@ -13,6 +13,51 @@
  */
 const features = [
   {
+    name: "ZipArchive::clearError",
+    description:
+      "Clear the status error message, system and/or zip messages",
+    keywords: ["zip", "errors"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ZipArchive::clearError",
+        url: "https://www.php.net/manual/en/ziparchive.clearerror.php",
+      }
+    ],
+  },
+  {
+    name: "ZipArchive::getStreamName",
+    description:
+      "Get a file handler to the entry defined by its name.",
+    keywords: ["zip", "streams"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ZipArchive::getStreamName",
+        url: "https://www.php.net/manual/en/ziparchive.getstreamname.php",
+      }
+    ],
+  },
+  {
+    name: "ZipArchive::getStreamIndex",
+    description:
+      "Get a file handler to the entry defined by its index.",
+    keywords: ["zip", "streams"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ZipArchive::getStreamIndex",
+        url: "https://www.php.net/manual/en/ziparchive.getstreamindex.php",
+      }
+    ],
+  },
+  {
     name: "New mysqli_execute_query function and mysqli::execute_query method.",
     description:
       "In PHP 8.2, the MySQLi extension provides a more straight-forward approach to prepare, bind, execute, and retrieve results from SQL.",
