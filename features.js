@@ -13,6 +13,29 @@
  */
 const features = [
   {
+    name: "json_validate",
+    description:
+      "Returns true if the string passed contains a valid json, otherwise returns false.",
+    keywords: ["JSON", "validation"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: json_validate",
+        url: "https://wiki.php.net/rfc/json_validate",
+      },
+      {
+        name: "The new json_validate() function - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#the-new-json_validate()-function-rfc",
+      },
+      {
+        name: "Added json_validate function - PHP.Watch",
+        url: "https://php.watch/versions/8.3/json_validate",
+      }
+    ],
+  },
+  {
     name: "Typed Class Constants",
     description:
       "PHP 8.3 and later support declaring a type for PHP Class constants.",
@@ -30,7 +53,7 @@ const features = [
         url: "https://php.watch/versions/8.3/typed-constants",
       },
       {
-        name: "What's new in PHP 8.3 - Stitcher.io",
+        name: "Typed class constants - Stitcher.io",
         url: "https://stitcher.io/blog/new-in-php-83#typed-class-constants-rfc",
       }
     ],
