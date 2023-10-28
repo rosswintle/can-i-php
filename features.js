@@ -32,7 +32,7 @@ const features = [
     ],
   },
   {
-    name: "null and false as standalone types",
+    name: "null, true and false as standalone types",
     description:
       "null corresponds to PHP's unit type, i.e. the type which holds a single value. false is a literal type of type bool",
     keywords: ["types", "typehints", "booleans"],
@@ -43,6 +43,10 @@ const features = [
       {
         name: "(RFC) Allow null and false as standalone types",
         url: "https://wiki.php.net/rfc/null-false-standalone-types",
+      },
+      {
+        name: "(RFC) Add true type",
+        url: "https://wiki.php.net/rfc/true-type",
       },
       {
         name: "What's new in PHP 8.2 (stitcher.io)",
