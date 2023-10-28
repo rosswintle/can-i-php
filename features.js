@@ -12,6 +12,220 @@
  *    it is then deprecated or removed in a newer version.
  */
 const features = [
+    {
+        name: "mbr_str_pad",
+        description:
+          "The mbstring equivalent of `str_pad`.",
+        keywords: ["string", "mbstring", "multibyte"],
+        added: "8.3",
+        deprecated: null,
+        removed: null,
+        resources: [
+          {
+            name: "RFC: mb_str_pad",
+            url: "https://wiki.php.net/rfc/mb_str_pad",
+          },
+          {
+            name: "New mb_str_pad function - Stitcher.io",
+            url: "https://stitcher.io/blog/new-in-php-83#new-mb_str_pad-function-rfc",
+          },
+        ],
+      },
+      {
+    name: "Anonymous readonly classes",
+    description:
+      "Anonymous classes can now be marked as readonly.",
+    keywords: ["objects", "classes", "readonly"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Anonymous readonly classes - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#anonymous-readonly-classes-upgrading",
+      },
+    ],
+  },
+  {
+    name: "#[Override] attribute",
+    description:
+      "Mark a method as overriding a parent method using the #[Override] attribute.",
+    keywords: ["objects", "methods", "inheritance", "attributes"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Marking overridden methods",
+        url: "https://wiki.php.net/rfc/marking_overriden_methods",
+      },
+      {
+        name: "#[Override] attribute - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#%23%5Boverride%5D-attribute-rfc",
+      },
+    ],
+  },
+  {
+    name: "Reinitializing readonly properties when cloning objects",
+    description:
+      "PHP 8.3 adds the possibility of overwriting readonly property values while cloning an object.",
+    keywords: ["objects", "properties", "readonly", "clone"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Readonly amendments",
+        url: "https://wiki.php.net/rfc/readonly_amendments",
+      },
+      {
+        name: "Readonly amendments - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#readonly-amendments-rfc",
+      },
+      {
+        name: "Cloning readonly properties in PHP 8.3 - Stitcher.io",
+        url: "https://stitcher.io/blog/cloning-readonly-properties-in-php-83",
+      }
+    ],
+  },
+  {
+    name: "Randomizer::nextFloat",
+    description:
+      "Generates a random float between 0 and 1, where 1 is excluded.",
+    keywords: ["random", "randomizer", "floats", "numbers"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Randomizer Additions",
+        url: "https://wiki.php.net/rfc/randomizer_additions",
+      },
+      {
+        name: "Randomizer additions - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#randomizer-additions-rfc",
+      },
+      {
+        name: "Random extension: New \Random\Randomizer::getFloat() and nextFloat() methods - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat",
+      }
+    ],
+  },
+  {
+    name: "Randomizer::getFloat",
+    description:
+      "Generate a random float value.",
+    keywords: ["random", "randomizer", "floats", "numbers"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Randomizer Additions",
+        url: "https://wiki.php.net/rfc/randomizer_additions",
+      },
+      {
+        name: "Randomizer additions - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#randomizer-additions-rfc",
+      },
+      {
+        name: "Random extension: New \Random\Randomizer::getFloat() and nextFloat() methods - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat",
+      }
+    ],
+  },
+  {
+    name: "Randomizer::getBytesFromString",
+    description:
+      "Generate a string with a given length that consists of randomly selected bytes from a given string.",
+    keywords: ["random", "randomizer"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Randomizer Additions",
+        url: "https://wiki.php.net/rfc/randomizer_additions",
+      },
+      {
+        name: "Randomizer additions - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#randomizer-additions-rfc",
+      },
+      {
+        name: "Random extension: New \Random\Randomizer::getBytesFromString method - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getBytesFromString",
+      }
+    ],
+  },
+  {
+    name: "Dynamic class constant and enum fetch with MyClass::{$constName}",
+    description:
+      "PHP 8.3 and later supports fetching class constants and Enum objects with a variable name using `MyClass::{$constName}`",
+    keywords: ["constants", "enums"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Dynamic class constant fetch",
+        url: "https://wiki.php.net/rfc/dynamic_class_constant_fetch",
+      },
+      {
+        name: "Dynamic class constant fetch - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#dynamic-class-constant-fetch-rfc",
+      },
+      {
+        name: "Dynamic class constant and Enum member fetch support - PHP.Watch",
+        url: "https://php.watch/versions/8.3/dynamic-class-const-enum-member-syntax-support",
+      }
+    ],
+  },
+  {
+    name: "json_validate",
+    description:
+      "Returns true if the string passed contains a valid json, otherwise returns false.",
+    keywords: ["JSON", "validation"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: json_validate",
+        url: "https://wiki.php.net/rfc/json_validate",
+      },
+      {
+        name: "The new json_validate() function - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#the-new-json_validate()-function-rfc",
+      },
+      {
+        name: "Added json_validate function - PHP.Watch",
+        url: "https://php.watch/versions/8.3/json_validate",
+      }
+    ],
+  },
+  {
+    name: "Typed Class Constants",
+    description:
+      "PHP 8.3 and later support declaring a type for PHP Class constants.",
+    keywords: ["types", "typehints", "constants", "classes"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Typed class constants",
+        url: "https://wiki.php.net/rfc/typed_class_constants",
+      },
+      {
+        name: "Typed Class Constants - PHP.Watch",
+        url: "https://php.watch/versions/8.3/typed-constants",
+      },
+      {
+        name: "Typed class constants - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#typed-class-constants-rfc",
+      }
+    ],
+  },
   {
     name: "openssl_cipher_key_length",
     description:
