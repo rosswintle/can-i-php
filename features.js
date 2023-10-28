@@ -13,6 +13,75 @@
  */
 const features = [
   {
+    name: "Randomizer::nextFloat",
+    description:
+      "Generates a random float between 0 and 1, where 1 is excluded.",
+    keywords: ["random", "randomizer", "floats", "numbers"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Randomizer Additions",
+        url: "https://wiki.php.net/rfc/randomizer_additions",
+      },
+      {
+        name: "Randomizer additions - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#randomizer-additions-rfc",
+      },
+      {
+        name: "Random extension: New \Random\Randomizer::getFloat() and nextFloat() methods - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat - PHP.Watch",
+      }
+    ],
+  },
+  {
+    name: "Randomizer::getFloat",
+    description:
+      "Generate a random float value.",
+    keywords: ["random", "randomizer", "floats", "numbers"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Randomizer Additions",
+        url: "https://wiki.php.net/rfc/randomizer_additions",
+      },
+      {
+        name: "Randomizer additions - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#randomizer-additions-rfc",
+      },
+      {
+        name: "Random extension: New \Random\Randomizer::getFloat() and nextFloat() methods - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat - PHP.Watch",
+      }
+    ],
+  },
+  {
+    name: "Randomizer::getBytesFromString",
+    description:
+      "Generate a string with a given length that consists of randomly selected bytes from a given string.",
+    keywords: ["random", "randomizer"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Randomizer Additions",
+        url: "https://wiki.php.net/rfc/randomizer_additions",
+      },
+      {
+        name: "Randomizer additions - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#randomizer-additions-rfc",
+      },
+      {
+        name: "Random extension: New \Random\Randomizer::getBytesFromString method - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getBytesFromString",
+      }
+    ],
+  },
+  {
     name: "Dynamic class constant and enum fetch with MyClass::{$constName}",
     description:
       "PHP 8.3 and later supports fetching class constants and Enum objects with a variable name using `MyClass::{$constName}`",
