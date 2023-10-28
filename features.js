@@ -13,6 +13,48 @@
  */
 const features = [
   {
+    name: "#[Override] attribute",
+    description:
+      "Mark a method as overriding a parent method using the #[Override] attribute.",
+    keywords: ["objects", "methods", "inheritance", "attributes"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Marking overridden methods",
+        url: "https://wiki.php.net/rfc/marking_overriden_methods",
+      },
+      {
+        name: "#[Override] attribute - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#%23%5Boverride%5D-attribute-rfc",
+      },
+    ],
+  },
+  {
+    name: "Reinitializing readonly properties when cloning objects",
+    description:
+      "PHP 8.3 adds the possibility of overwriting readonly property values while cloning an object.",
+    keywords: ["objects", "properties", "readonly", "clone"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Readonly amendments",
+        url: "https://wiki.php.net/rfc/readonly_amendments",
+      },
+      {
+        name: "Readonly amendments - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#readonly-amendments-rfc",
+      },
+      {
+        name: "Cloning readonly properties in PHP 8.3 - Stitcher.io",
+        url: "https://stitcher.io/blog/cloning-readonly-properties-in-php-83",
+      }
+    ],
+  },
+  {
     name: "Randomizer::nextFloat",
     description:
       "Generates a random float between 0 and 1, where 1 is excluded.",
