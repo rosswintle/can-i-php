@@ -1109,4 +1109,40 @@ const features = [
       },
     ],
   },
+  {
+    name: "utf8_encode (deprecated)",
+    description: "utf8_encode and utf8_decode Functions Deprecated - The RFC suggests using mb_convert_encoding() instead.",
+    keywords: ["encode", "encoding", "utf8", "deprecations"],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode",
+      },
+      {
+        name: "utf8_encode() and utf8_decode() deprecations (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#utf8_encode()-and-utf8_decode()-deprecations-rfc",
+      },
+    ],
+  },
+  {
+    name: "utf8_decode (deprecated)",
+    description: "utf8_encode and utf8_decode Functions Deprecated - The RFC suggests using mb_convert_encoding() instead.",
+    keywords: ["decode", "decoding", "utf8", "deprecations"],
+    added: "0.0",
+    deprecated: "8.2",
+    removed: "9.0",
+    resources: [
+      {
+        name: "RFC (php.net)",
+        url: "https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode",
+      },
+      {
+        name: "utf8_encode() and utf8_decode() deprecations (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#utf8_encode()-and-utf8_decode()-deprecations-rfc",
+      },
+    ],
+  },
 ];
