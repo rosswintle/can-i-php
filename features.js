@@ -13,6 +13,29 @@
  */
 const features = [
   {
+    name: "Dynamic class constant and enum fetch with MyClass::{$constName}",
+    description:
+      "PHP 8.3 and later supports fetching class constants and Enum objects with a variable name using `MyClass::{$constName}`",
+    keywords: ["constants", "enums"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Dynamic class constant fetch",
+        url: "https://wiki.php.net/rfc/dynamic_class_constant_fetch",
+      },
+      {
+        name: "Dynamic class constant fetch - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#dynamic-class-constant-fetch-rfc",
+      },
+      {
+        name: "Dynamic class constant and Enum member fetch support - PHP.Watch",
+        url: "https://php.watch/versions/8.3/dynamic-class-const-enum-member-syntax-support",
+      }
+    ],
+  },
+  {
     name: "json_validate",
     description:
       "Returns true if the string passed contains a valid json, otherwise returns false.",
