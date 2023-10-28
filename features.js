@@ -13,6 +13,36 @@
  */
 const features = [
   {
+    name: "ReflectionMethod::hasPrototype",
+    description:
+      "Returns whether a method has a prototype.",
+    keywords: ["reflection", "functions", "methods"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ReflectionMethod::hasPrototype",
+        url: "https://www.php.net/manual/en/reflectionmethod.hasprototype.php",
+      }
+    ],
+  },
+  {
+    name: "ReflectionFunction::isAnonymous",
+    description:
+      "Checks if a function is anonymous.",
+    keywords: ["reflection", "functions"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Docs: ReflectionFunction::isAnonymous",
+        url: "https://www.php.net/manual/en/reflectionfunction.isanonymous.php",
+      }
+    ],
+  },
+  {
     name: "ZipArchive::clearError",
     description:
       "Clear the status error message, system and/or zip messages",
