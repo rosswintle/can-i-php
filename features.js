@@ -73,7 +73,7 @@ const features = [
       },
       {
         name: "Random extension: New \Random\Randomizer::getFloat() and nextFloat() methods - PHP.Watch",
-        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat",
       }
     ],
   },
@@ -96,7 +96,7 @@ const features = [
       },
       {
         name: "Random extension: New \Random\Randomizer::getFloat() and nextFloat() methods - PHP.Watch",
-        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat - PHP.Watch",
+        url: "https://php.watch/versions/8.3/Randomizer-getFloat-nextFloat",
       }
     ],
   },
