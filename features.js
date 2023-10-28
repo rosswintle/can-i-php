@@ -13,6 +13,29 @@
  */
 const features = [
   {
+    name: "Typed Class Constants",
+    description:
+      "PHP 8.3 and later support declaring a type for PHP Class constants.",
+    keywords: ["types", "typehints", "constants", "classes"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "RFC: Typed class constants",
+        url: "https://wiki.php.net/rfc/typed_class_constants",
+      },
+      {
+        name: "Typed Class Constants - PHP.Watch",
+        url: "https://php.watch/versions/8.3/typed-constants",
+      },
+      {
+        name: "What's new in PHP 8.3 - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#typed-class-constants-rfc",
+      }
+    ],
+  },
+  {
     name: "openssl_cipher_key_length",
     description:
       "Gets the cipher key length",
