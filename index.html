@@ -27,7 +27,7 @@
       x-data="features"
       class="text-center pt-6 pb-24 px-6 md:w-2/3 max-w-4xl mx-auto"
     >
-      <header class="mb-12">
+      <header class="mb-12 relative">
         <div class="mb-14 text-sm">
           <a
             class="underline hover:no-underline"
@@ -66,6 +66,9 @@
           This is a list of language features and functions added or removed in
           recent PHP versions. It is not an exhaustive reference.
         </p>
+        <div class="w-auto px-6 py-4 bg-red-500 text-white font-bold absolute left-auto right-5 top-8 rotate-6">
+            Now with added PHP 8.3!
+        </div>
       </header>
       <main>
         <form action="" @submit.prevent="">
