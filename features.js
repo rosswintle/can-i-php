@@ -13,6 +13,29 @@
  */
 const features = [
   {
+    name: "Constants in traits",
+    description:
+      "You can now use constants in traits.",
+    keywords: ["constants", "const", "traits", "classes"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#constants_in_traits",
+      },
+      {
+        name: "(RFC) Constants in Traits",
+        url: "https://wiki.php.net/rfc/constants_in_traits",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#constants-in-traits-rfc",
+      },
+    ],
+  },
+  {
     name: "New 'Random' extension",
     description:
       "a new random number generator that fixes a lot of problems with the previous one.",
