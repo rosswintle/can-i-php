@@ -12,7 +12,26 @@
  *    it is then deprecated or removed in a newer version.
  */
 const features = [
-  {
+    {
+        name: "mbr_str_pad",
+        description:
+          "The mbstring equivalent of `str_pad`.",
+        keywords: ["string", "mbstring", "multibyte"],
+        added: "8.3",
+        deprecated: null,
+        removed: null,
+        resources: [
+          {
+            name: "RFC: mb_str_pad",
+            url: "https://wiki.php.net/rfc/mb_str_pad",
+          },
+          {
+            name: "New mb_str_pad function - Stitcher.io",
+            url: "https://stitcher.io/blog/new-in-php-83#new-mb_str_pad-function-rfc",
+          },
+        ],
+      },
+      {
     name: "Anonymous readonly classes",
     description:
       "Anonymous classes can now be marked as readonly.",
