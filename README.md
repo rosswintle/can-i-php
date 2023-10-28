@@ -1,5 +1,7 @@
 # caniphp.com
 
+**STATUS: The feature list is complete for PHP v8.2. I am working on adding v8.3 features.**
+
 [caniphp.com](https://caniphp.com/) is like caniuse.com but for PHP features. It's a simple search of PHP features that added, deprecated and removed in recent versions
 of PHP (v5.6+).
 
