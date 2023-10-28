@@ -13,25 +13,29 @@
  */
 const features = [
   {
-    name: "Disjunctive Normal Form types",
+    name: "New 'Random' extension",
     description:
-      "DNF types allow us to combine union and intersection types. Intersection types must be grouped with brackets. e.g. `(HasTitle&HasId)|null`",
-    keywords: ["types", "typehints"],
+      "a new random number generator that fixes a lot of problems with the previous one.",
+    keywords: ["random", "randomizer", "rng", "number", "numbers"],
     added: "8.2",
     deprecated: null,
     removed: null,
     resources: [
       {
         name: "Announcement (php.net)",
-        url: "https://www.php.net/releases/8.2/en.php#dnf_types",
+        url: "https://www.php.net/releases/8.2/en.php#random_extension",
       },
       {
-        name: "(RFC) Disjunctive Normal Form Types",
-        url: "https://wiki.php.net/rfc/dnf_types",
+        name: "(RFC) Random Extension 5.x",
+        url: "https://wiki.php.net/rfc/rng_extension",
+      },
+      {
+        name: "(RFC) Random Extension Improvement",
+        url: "https://wiki.php.net/rfc/random_extension_improvement",
       },
       {
         name: "What's new in PHP 8.2 (stitcher.io)",
-        url: "https://stitcher.io/blog/new-in-php-82#disjunctive-normal-form-types-rfc",
+        url: "https://stitcher.io/blog/new-in-php-82#new-random-extension-rfc",
       },
     ],
   },
