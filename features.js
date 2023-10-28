@@ -149,8 +149,8 @@ const features = [
         url: "https://www.php.net/manual/function.memory-reset-peak-usage.php",
       },
       {
-        name: "Backtrace parameter redaction (PHP.Watch)",
-        url: "https://php.watch/versions/8.2/memory_reset_peak_usage",
+        name: "Reset recorded peak memory usage: memory_reset_peak_usage",
+        url: "https://php.watch/versions/8.2#memory_reset_peak_usage",
       },
     ],
   },
