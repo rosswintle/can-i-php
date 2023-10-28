@@ -13,6 +13,21 @@
  */
 const features = [
   {
+    name: "Anonymous readonly classes",
+    description:
+      "Anonymous classes can now be marked as readonly.",
+    keywords: ["objects", "classes", "readonly"],
+    added: "8.3",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Anonymous readonly classes - Stitcher.io",
+        url: "https://stitcher.io/blog/new-in-php-83#anonymous-readonly-classes-upgrading",
+      },
+    ],
+  },
+  {
     name: "#[Override] attribute",
     description:
       "Mark a method as overriding a parent method using the #[Override] attribute.",
