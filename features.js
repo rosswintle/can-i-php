@@ -36,6 +36,29 @@ const features = [
     ],
   },
   {
+    name: "Disjunctive Normal Form types",
+    description:
+      "DNF types allow us to combine union and intersection types. Intersection types must be grouped with brackets. e.g. `(HasTitle&HasId)|null`",
+    keywords: ["types", "typehints"],
+    added: "8.2",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#dnf_types",
+      },
+      {
+        name: "(RFC) Disjunctive Normal Form Types",
+        url: "https://wiki.php.net/rfc/dnf_types",
+      },
+      {
+        name: "What's new in PHP 8.2 (stitcher.io)",
+        url: "https://stitcher.io/blog/new-in-php-82#disjunctive-normal-form-types-rfc",
+      },
+    ],
+  },
+  {
     name: "Read-only classes",
     description:
       "Marking a class as read-only will implicitly mark all instance properties of a class as readonly. Furthermore, it will prevent the creation of dynamic properties.",
@@ -44,6 +67,10 @@ const features = [
     deprecated: null,
     removed: null,
     resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#dnf_types",
+      },
       {
         name: "(RFC) Readonly classes",
         url: "https://wiki.php.net/rfc/readonly_classes",
@@ -63,6 +90,10 @@ const features = [
     deprecated: null,
     removed: null,
     resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#null_false_true_types",
+      },
       {
         name: "(RFC) Allow null and false as standalone types",
         url: "https://wiki.php.net/rfc/null-false-standalone-types",
@@ -937,6 +968,10 @@ const features = [
     deprecated: "8.2",
     removed: "9.0",
     resources: [
+      {
+        name: "Announcement (php.net)",
+        url: "https://www.php.net/releases/8.2/en.php#deprecate_dynamic_properties",
+      },
       {
         name: "RFC (php.net)",
         url: "https://wiki.php.net/rfc/deprecate_dynamic_properties",
