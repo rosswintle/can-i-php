@@ -13,7 +13,7 @@
  */
 const features = [
     {
-        name: "mbr_str_pad",
+        name: "mb_str_pad",
         description:
           "The mbstring equivalent of `str_pad`.",
         keywords: ["string", "mbstring", "multibyte"],
