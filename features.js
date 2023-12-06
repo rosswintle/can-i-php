@@ -1480,3 +1480,5 @@ const features = [
     ],
   },
 ];
+
+module.exports = features;

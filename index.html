@@ -24,7 +24,7 @@
   <body>
     <div
       id="app"
-      x-data="features"
+      x-data="caniphp"
       class="text-center pt-6 pb-24 px-6 md:w-2/3 max-w-4xl mx-auto"
     >
       <header class="mb-12 relative">
@@ -96,7 +96,7 @@
 
         <div
           class="text-left prose lg:prose-xl"
-          x-show="filteredFeatures().length === 0"
+          x-show="filteredFeatures().length === 0 && !loading"
           style="display: none"
         >
           <h3>Nothing matches!</h3>
@@ -196,11 +196,11 @@
     <script src="https://cdn.usefathom.com/script.js" data-site="IULNCQBS" defer></script>    <!-- / Fathom -->
 
     <script src="versions.js"></script>
-    <script src="features.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <script>
       document.addEventListener("alpine:init", () => {
+
         document.querySelector("input[name=s]").focus();
 
         const url = new URL(window.location.href);
@@ -209,16 +209,24 @@
 
         const versionFilter = url.searchParams.get("version");
 
-        Alpine.data("features", () => {
+        Alpine.data("caniphp", () => {
           return {
             // searchString: window.location.pathname.slice(1) ?? '',
             searchString: searchParam ?? "",
+
+            features: [],
+
+            loading: true,
 
             versions: versions,
 
             versionFilter: versionFilter ?? "",
 
-            init() {
+            async init() {
+              const featuresData = await fetch("/features.json");
+              this.features = await featuresData.json();
+              this.loading = false;
+
               this.$watch("searchString", (value) => {
                 const url = new URL(window.location.href);
                 if (value.length > 0) {
@@ -324,7 +332,7 @@
             },
 
             featuresHaving(featureKeyword) {
-              return features.filter((feature) =>
+              return this.features.filter((feature) =>
                 this.featureMatches(feature, featureKeyword)
               );
             },

@@ -1,6 +1,6 @@
 # caniphp.com
 
-**STATUS: The feature list is complete for PHP v8.2. I am working on adding v8.3 features.**
+**STATUS: The feature list is complete for PHP v8.2 and v8.3.**
 
 [caniphp.com](https://caniphp.com/) is like caniuse.com but for PHP features. It's a simple search of PHP features that added, deprecated and removed in recent versions
 of PHP (v5.6+).
@@ -67,7 +67,7 @@ Features to add to the list will need to meet the following criteria:
 
 PHP features are listed in `features.js`. This file is ordered by PHP version (see below for more on this). Hopefully the format of this makes sense. But for reference:
 
-- the whole thing is a JSON array
+- the whole thing is a JSON array - this is converted to JSON using the `build.sh` script - it's just easier to write JS than JSON!
 - each entry is an object with the following properties:
   - `name`: The name of the feature - plain text only
   - `description`: A description of the feature - HTML is allowed, but may not be styled. Some BASIC Markdown is allowed. It's recommended to use template literals
