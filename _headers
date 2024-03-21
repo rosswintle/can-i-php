@@ -1,0 +1,3 @@
+# Cloudflare pages headers
+/features.json
+    Content-Type: application/json
