@@ -598,6 +598,38 @@ const features = [
     ],
   },
   {
+    name: "xxHash algorithm",
+    description:
+      "xxHash is an extremely fast hashing algorithm that is not designed for cryptographic purposes, but provides excellent randomness and dispersion of output, and uniqueness of to minimize collisions",
+    keywords: [
+      "xxhash",
+      "hash",
+      "functions",
+      "performance",
+    ],
+    added: "8.1",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP.Watch xxHash hash algorithms support (php.watch)",
+        url: "https://php.watch/versions/8.1/xxHash",
+      },
+      {
+        name: "hash function documentation (php.net)",
+        url: "https://www.php.net/manual/en/function.hash.php",
+      },
+      {
+        name: "xxHash Website",
+        url: "https://xxhash.com/",
+      },
+      {
+        name: "xxHash Repository (github.com)",
+        url: "https://github.com/Cyan4973/xxHash",
+      },
+    ],
+  },
+  {
     name: "Enums",
     description: "Enums are a way to define a set of named constants.",
     keywords: ["constants", "class", "classes"],
