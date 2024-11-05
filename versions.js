@@ -67,7 +67,13 @@ const versions = [
   {
     version: "8.3",
     releasedDate: "2023-11-23",
-    deprecatedDate: "", // 2025-11-23?
-    eolDate: "", // 2026-11-23?
+    deprecatedDate: "2025-12-31",
+    eolDate: "2027-12-31"
   },
+  {
+    version: "8.4",
+    releasedDate: "2024-11-21",
+    deprecatedDate: "2026-12-31",
+    eolDate: "2028-12-31"
+  }
 ];
