@@ -13,28 +13,9 @@
  */
 const features = [
     {
-        name: "mb_str_pad",
-        description:
-            "The mbstring equivalent of `str_pad`.",
-        keywords: ["string", "mbstring", "multibyte"],
-        added: "8.3",
-        deprecated: null,
-        removed: null,
-        resources: [
-            {
-                name: "RFC: mb_str_pad",
-                url: "https://wiki.php.net/rfc/mb_str_pad",
-            },
-            {
-                name: "New mb_str_pad function - Stitcher.io",
-                url: "https://stitcher.io/blog/new-in-php-83#new-mb_str_pad-function-rfc",
-            },
-        ],
-    },
-    {
         name: "Property Hooks",
-        description: "",
-        keywords: [],
+        description: "Allows object properties to have getter and setter hooks/methods.",
+        keywords: ["hooks", "getter", "setter", "objects", "properties"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -43,13 +24,12 @@ const features = [
             { name: "PHP RFC", url: "https://wiki.php.net/rfc/property-hooks" },
             { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/new-in-php-84#property-hooks-rfc" },
             { name: "Ash Allen Design Blog", url: "https://ashallendesign.co.uk/blog/php-84-property-hooks" },
-            { name: "PHP Watch", url: "https://php.watch/versions/8.4" }
         ]
     },
     {
         name: "Asymmetric Property Visibility",
-        description: "",
-        keywords: [],
+        description: "Object properties may now have their set visibility controlled separately from the get visibility.",
+        keywords: ["objects", "getters", "setters", "properties"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -61,8 +41,8 @@ const features = [
     },
     {
         name: "Lazy Objects",
-        description: "",
-        keywords: [],
+        description: "It is now possible to create objects whose initialization is deferred until they are accessed.",
+        keywords: ["objects", "initialization", "constructor"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -73,8 +53,8 @@ const features = [
         ]
     },
     {
-        name: "`#[\\Deprecated]` attribute",
-        description: "",
+        name: "#[\\Deprecated] attribute",
+        description: "The new Deprecated attribute can be used to mark functions, methods, and class constants as deprecated.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -85,7 +65,7 @@ const features = [
     },
     {
         name: "request_parse_body() function",
-        description: "",
+        description: "Added `request_parse_body()` function that allows parsing RFC1867 (multipart) requests in non-POST HTTP requests.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -97,7 +77,7 @@ const features = [
     },
     {
         name: "`new` without parentheses",
-        description: "",
+        description: "New expressions with constructor arguments now allow chaining method calls, property accesses, etc. without enclosing the expression in parentheses.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -111,19 +91,18 @@ const features = [
     },
     {
         name: "Improved Debugging Info for WeakReference",
-        description: "",
+        description: "Getting the debug info for `WeakReference` will now also output the object it references, or `null` if the reference is no longer valid.",
         keywords: [],
         added: "8.4",
         deprecated: null,
         removed: null,
         resources: [
-            { name: "PHP Manual", url: "https://www.php.net/manual/en/class.weakreference.php" },
             { name: "PHP Manual", url: "https://www.php.net/manual/en/migration84.new-features.php#migration84.new-features.core.debug-weakref" }
         ]
     },
     {
         name: "Improved Debugging Info for Closure",
-        description: "",
+        description: "The output of `Closure::__debugInfo()` now includes the name, file, and line of the Closure.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -134,7 +113,7 @@ const features = [
     },
     {
         name: "Defining Identical Symbols in Different Namespace Blocks",
-        description: "",
+        description: "Exiting a namespace now clears seen symbols. This allows using a symbol in a namespace block, even if a previous namespace block declared a symbol with the same name.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -145,7 +124,7 @@ const features = [
     },
     {
         name: "curl_version() feature_list support",
-        description: "",
+        description: "`curl_version()` returns an additional `feature_list` value, which is an associative array of all known cURL features, and whether they are supported (`true`) or not (`false`).",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -157,8 +136,8 @@ const features = [
     },
     {
         name: "CURL_HTTP_VERSION_3 and CURL_HTTP_VERSION_3ONLY constants for HTTP/3 support",
-        description: "",
-        keywords: [],
+        description: "Added `CURL_HTTP_VERSION_3` and `CURL_HTTP_VERSION_3ONLY` constants as available options for `CURLOPT_HTTP_VERSION`.",
+        keywords: ["http3", "quic"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -169,7 +148,7 @@ const features = [
     },
     {
         name: "CURLOPT_PREREQFUNCTION option",
-        description: "",
+        description: "Added `CURLOPT_PREREQFUNCTION` as a cURL option that accepts a callable to be called after the connection is made, but before the request is sent",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -180,7 +159,7 @@ const features = [
     },
     {
         name: "CURLOPT_SERVER_RESPONSE_TIMEOUT option",
-        description: "",
+        description: "Added `CURLOPT_SERVER_RESPONSE_TIMEOUT`, which was formerly known as `CURLOPT_FTP_RESPONSE_TIMEOUT`. Both constants hold the same value.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -191,8 +170,8 @@ const features = [
     },
     {
         name: "CURLOPT_DEBUGFUNCTION option",
-        description: "",
-        keywords: [],
+        description: "Added `CURLOPT_DEBUGFUNCTION` as a cURL option that accepts a callable that gets called during the request lifetime.",
+        keywords: ["debugging"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -204,8 +183,8 @@ const features = [
         name: "CURLOPT_BINARYTRANSFER deprecated",
         description: "",
         keywords: [],
-        added: "8.4",
-        deprecated: null,
+        added: "5.6",
+        deprecated: 8.4,
         removed: null,
         resources: [
             { name: "PHP Watch", url: "https://php.watch/versions/8.4/CURLOPT_BINARYTRANSFER-deprecated" },
