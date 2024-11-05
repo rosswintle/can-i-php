@@ -193,8 +193,8 @@ const features = [
     },
     {
         name: "Dom namespace",
-        description: "",
-        keywords: [],
+        description: "Added the `Dom` namespace with new classes as counterparts to the existing `DOM` classes (e.g. `Dom\Node` is the new `DOMNode`). These classes are compatible with HTML 5 and are WHATWG spec-compliant.",
+        keywords: ["HTML5"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -204,8 +204,8 @@ const features = [
     },
     {
         name: "DOMNode::compareDocumentPosition()",
-        description: "",
-        keywords: [],
+        description: "`DOMNode::compareDocumentPosition()` with its associated constants",
+        keywords: ["HTML"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -215,8 +215,8 @@ const features = [
     },
     {
         name: "Intl: NumberFormatter::ROUND_HALFODD",
-        description: "",
-        keywords: [],
+        description: "Added the `NumberFormatter::ROUND_HALFODD` to complement the existing `NumberFormatter::ROUND_HALFEVEN` functionality",
+        keywords: ["internationalization", "localization", "i18n", "formatting"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -226,8 +226,8 @@ const features = [
     },
     {
         name: "OpenSSL: support for Curve25519 + Curve448 based keys",
-        description: "",
-        keywords: [],
+        description: "Added support for Curve25519 + Curve448 based keys. Specifically x25519, ed25519, x448 and ed448 fields are supported.",
+        keywords: ["security", "encryption", "cryptography"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -237,8 +237,8 @@ const features = [
     },
     {
         name: "OpenSSL: PASSWORD_ARGON2 password hashing",
-        description: "",
-        keywords: [],
+        description: "Implement `PASSWORD_ARGON2` password hashing. Requires OpenSSL 3.2 and NTS build.",
+        keywords: ["security", "encryption", "cryptography"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -248,8 +248,8 @@ const features = [
     },
     {
         name: "PCRE2 Regular Expressions",
-        description: "",
-        keywords: [],
+        description: "The bundled pcre2lib has been updated, enabling new patterns and modifiers.",
+        keywords: ["regex", "case", "assertions", "perl"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -259,8 +259,8 @@ const features = [
         ]
     },
     {
-        name: "ReflectionClass improvements (don't log all of these)",
-        description: "",
+        name: "ReflectionClass improvements in PHP 8.4",
+        description: "Multiple new methods and constants which are related to the lazy objects feature have been added, plus other small additions.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -316,7 +316,7 @@ const features = [
     },
     {
         name: "DateTime::createFromTimestamp() and DateTimeImmutable::createFromTimestamp()",
-        description: "",
+        description: "The `DateTime` and `DateTimeImmutable` classes in PHP 8.4 have a new method named `createFromTimeStamp` creates an instance from a given UNIX timestamp as an integer or a float value.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -328,7 +328,7 @@ const features = [
     },
     {
         name: "DateTime::getMicrosecond() and DateTimeImmutable::getMicrosecond()",
-        description: "",
+        description: "The `DateTime` and `DateTimeImmutable` classes in PHP 8.4 and later support `getMicrosecond` and `setMicrosecond` methods to get and set the microsecond amount of the `DateTime`/`DateTimeImmutable` objects.",
         keywords: [],
         added: "8.4",
         deprecated: null,
