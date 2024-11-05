@@ -340,7 +340,7 @@ const features = [
     },
     {
         name: "DateTime::setMicrosecond() and DateTimeImmutable::setMicrosecond()",
-        description: "",
+        description: "The `DateTime` and `DateTimeImmutable` classes in PHP 8.4 and later support `getMicrosecond` and `setMicrosecond` methods to get and set the microsecond amount of the `DateTime`/`DateTimeImmutable` objects.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -352,8 +352,8 @@ const features = [
     },
     {
         name: "DOMXPath::quote()",
-        description: "",
-        keywords: [],
+        description: "`DOMXPath::quote` — Quotes a string for use in an XPath expression",
+        keywords: ["HTML", "XML"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -363,8 +363,8 @@ const features = [
     },
     {
         name: "IntlDateFormatter::getIanaID()",
-        description: "",
-        keywords: [],
+        description: "The Intl extension in PHP 8.4 provides a new function named `intltz_get_iana_id` and a new static method `IntlTimeZone::getIanaID()` that returns the IANA time zone ID for a given timezone identifier.",
+        keywords: ["internationalization", "localization", "i18n", "formatting"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -375,8 +375,8 @@ const features = [
     },
     {
         name: "intltz_get_iana_id()",
-        description: "",
-        keywords: [],
+        description: "The Intl extension in PHP 8.4 provides a new function named `intltz_get_iana_id` and a new static method `IntlTimeZone::getIanaID()` that returns the IANA time zone ID for a given timezone identifier.",
+        keywords: ["internationalization", "localization", "i18n", "formatting"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -388,7 +388,7 @@ const features = [
     {
         name: "IntlDateFormatter::parseToCalendar()",
         description: "",
-        keywords: [],
+        keywords: ["internationalization", "localization", "i18n", "formatting"],
         added: "8.4",
         deprecated: null,
         removed: null,
@@ -409,7 +409,7 @@ const features = [
     },
     {
         name: "grapheme_str_split()",
-        description: "",
+        description: "Split a string into an array with support for grapheme cluster byte characters.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -421,7 +421,7 @@ const features = [
     },
     {
         name: "mb_ucfirst()",
-        description: "",
+        description: "Make a string's first character uppercase (multi-byte safe).",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -433,7 +433,7 @@ const features = [
     },
     {
         name: "mb_lcfirst()",
-        description: "",
+        description: "Make a string's first character lowercase (multi-byte safe).",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -445,7 +445,7 @@ const features = [
     },
     {
         name: "mb_rtrim()",
-        description: "",
+        description: "Strip whitespace (or other characters) from the end of a string (multi-byte safe).",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -457,7 +457,7 @@ const features = [
     },
     {
         name: "mb_ltrim()",
-        description: "",
+        description: "Strip whitespace (or other characters) from the beginning of a string (multi-byte safe).",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -469,7 +469,7 @@ const features = [
     },
     {
         name: "mb_trim()",
-        description: "",
+        description: "Strip whitespace (or other characters) from the beginning and end of a string (multi-byte safe).",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -481,7 +481,7 @@ const features = [
     },
     {
         name: "http_get_last_response_headers()",
-        description: "",
+        description: "PHP 8.4 adds the function `http_get_last_response_headers` that gets the HTTP headers of the last HTTP wrapper response. This can replace the historical `$http_response_header` variable.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -492,7 +492,7 @@ const features = [
     },
     {
         name: "http_clear_last_response_headers()",
-        description: "",
+        description: "PHP 8.4 adds the function `http_clear_last_response_headers` that clears the HTTP headers of the last HTTP wrapper response. This can replace the historical `$http_response_header` variable.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -503,21 +503,21 @@ const features = [
     },
     {
         name: "array_all()",
-        description: "",
+        description: "Checks if all array elements satisfy a callback function.",
         keywords: [],
         added: "8.4",
         deprecated: null,
         removed: null,
         resources: [
             { name: "PHP Manual", url: "https://www.php.net/manual/en/function.array-all.php" },
-            { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/new-in-php-84#array_find-rfc" },
             { name: "PHP RFC", url: "https://wiki.php.net/rfc/array_find" },
-            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" }
+            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" },
+            { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/new-in-php-84#array_find-rfc" }
         ]
     },
     {
         name: "array_any()",
-        description: "",
+        description: "Checks if at least one array element satisfies a callback function.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -525,24 +525,27 @@ const features = [
         resources: [
             { name: "PHP Manual", url: "https://www.php.net/manual/en/function.array-any.php" },
             { name: "PHP RFC", url: "https://wiki.php.net/rfc/array_find" },
-            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" }
+            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" },
+            { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/new-in-php-84#array_find-rfc" }
         ]
     },
     {
         name: "array_find()",
-        description: "",
+        description: "Returns the first element satisfying a callback function.",
         keywords: [],
         added: "8.4",
         deprecated: null,
         removed: null,
         resources: [
             { name: "PHP Manual", url: "https://www.php.net/manual/en/function.array-find.php" },
+            { name: "PHP RFC", url: "https://wiki.php.net/rfc/array_find" },
+            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" },
             { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/array-find-in-php-84" }
         ]
     },
     {
         name: "array_find_key()",
-        description: "",
+        description: "Returns the key of the first element satisfying a callback function.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -550,15 +553,16 @@ const features = [
         resources: [
             { name: "PHP Manual", url: "https://www.php.net/manual/en/function.array-find-key.php" },
             { name: "PHP RFC", url: "https://wiki.php.net/rfc/array_find" },
-            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" }
+            { name: "PHP Watch", url: "https://php.watch/versions/8.4/array_find-array_find_key-array_any-array_all" },
+            { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/array-find-in-php-84" }
         ]
     },
     {
         name: "Implicit Nullable Types (deprecation)",
-        description: "",
+        description: "A typed variable with a default null value would be made nullable automatically - this behaviour is now deprecated and will be removed in PHP 9.",
         keywords: [],
-        added: "8.4",
-        deprecated: null,
+        added: "5.6",
+        deprecated: "8.4",
         removed: null,
         resources: [
             { name: "Stitcher.io Blog", url: "https://stitcher.io/blog/new-in-php-84#implicit-nullable-types-deprecation" },
@@ -569,7 +573,7 @@ const features = [
     },
     {
         name: "DOM HTML5 support",
-        description: "",
+        description: "PHP 8.4 adds a `\Dom\HTMLDocument` class which is able to parse HTML5 code properly. The old `\DOMDocument` class is still available for backwards compatibility.",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -582,7 +586,7 @@ const features = [
     },
     {
         name: "JIT changes",
-        description: "",
+        description: "PHP 8.4 changes the way the JIT is enabled to use `opcache.jit=disable`",
         keywords: [],
         added: "8.4",
         deprecated: null,
@@ -594,8 +598,8 @@ const features = [
     },
     {
         name: "Sodium: AEGIS-128L and AEGIS256 support",
-        description: "",
-        keywords: [],
+        description: "The Sodium extension in PHP 8.4 supports AEGIS-128L and AEGIS256 encryption algorithms if the Sodium extension is compiled with libsodium 1.0.19 or later.",
+        keywords: ["security", "encryption", "cryptography"],
         added: "8.4",
         deprecated: null,
         removed: null,
