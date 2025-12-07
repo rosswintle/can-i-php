@@ -608,6 +608,36 @@ const features = [
         ]
     },
     {
+        name: "str_increment",
+        description:
+            "Increment an alphanumeric string.",
+        keywords: ["string", "number"],
+        added: "8.3",
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: "str_increment (php.net)",
+                url: "https://www.php.net/manual/en/function.str-increment.php",
+            },
+        ],
+    },
+    {
+        name: "str_decrement",
+        description:
+            "Decrement an alphanumeric string.",
+        keywords: ["string", "number"],
+        added: "8.3",
+        deprecated: null,
+        removed: null,
+        resources: [
+            {
+                name: "str_decrement (php.net)",
+                url: "https://www.php.net/manual/en/function.str-decrement.php",
+            },
+        ],
+    },
+    {
         name: "mb_str_pad",
         description:
             "The mbstring equivalent of `str_pad`.",
