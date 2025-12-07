@@ -19,7 +19,7 @@
       name="description"
       content="A list of PHP features and the versions of PHP that they are present in. Like caniuse.com but for PHP!"
     />
-    <link href="/dist/style-1765140640.css" rel="stylesheet" />
+    <link href="/dist/style-1765148925.css" rel="stylesheet" />
   </head>
   <body>
     <div
@@ -67,7 +67,7 @@
           recent PHP versions. It is not an exhaustive reference.
         </p>
         <div class="w-auto px-6 py-4 bg-red-500 text-white font-bold absolute left-auto right-5 top-8 rotate-6">
-            Now with added PHP 8.4!
+            Now with added PHP 8.5!
         </div>
       </header>
       <main>
@@ -195,7 +195,7 @@
     <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="IULNCQBS" defer></script>    <!-- / Fathom -->
 
-    <script src="/dist/versions-1765140640.js"></script>
+    <script src="/dist/versions-1765148925.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <script>
@@ -223,7 +223,7 @@
             versionFilter: versionFilter ?? "",
 
             async init() {
-              const featuresData = await fetch("/dist/features-1765140640.json");
+              const featuresData = await fetch("/dist/features-1765148925.json");
               this.features = await featuresData.json();
               this.loading = false;
 

@@ -319,6 +319,110 @@ const features = [
     ],
   },
   {
+    name: "locale_is_right_to_left()",
+    description:
+      "Functionality to determine if a given locale uses an RTL (Right-to-Left) script.",
+    keywords: ["internationalization", "i18n"],
+    added: "8.5",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP.Watch",
+        url: "https://php.watch/versions/8.5/locale_is_right_to_left-Locale-isRightToleft",
+      },
+    ],
+  },
+  {
+    name: "Locale::isRightToLeft()",
+    description:
+      "Functionality to determine if a given locale uses an RTL (Right-to-Left) script.",
+    keywords: ["internationalization", "i18n"],
+    added: "8.5",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP.Watch",
+        url: "https://php.watch/versions/8.5/locale_is_right_to_left-Locale-isRightToleft",
+      },
+    ],
+  },
+  {
+    name: "IntlListFormatter class",
+    description:
+      'Provides locale-aware formatting for lists into human-readable lists of "and"-lists, "or"-lists, or units.',
+    keywords: [
+      "internationalization",
+      "i18n",
+      "formatting",
+      "strings",
+      "arrays",
+    ],
+    added: "8.5",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP.Watch",
+        url: "https://php.watch/versions/8.5/IntlListFormatter",
+      },
+    ],
+  },
+  {
+    name: "max_memory_limit INI setting/directive",
+    description:
+      "Provides a way to set the maximum memory limit a single request is permitted to consume. When this limit is exceeded, the execution is halted.",
+    keywords: ["memory", "settings"],
+    added: "8.5",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP.Watch",
+        url: "https://php.watch/versions/8.5/max_memory_limit",
+      },
+    ],
+  },
+  {
+    name: "Non-canonical scalar type casts (boolean, double, integer, binary)",
+    description:
+      "Non-canonical cast names (boolean), (integer), (double), and (binary) have been deprecated since PHP 8.5. Use (bool), (int), (float), and (string) instead, respectively.",
+    keywords: ["types", "casts", "coercion"],
+    added: "4.0",
+    deprecated: "8.5",
+    removed: null,
+    resources: [
+      {
+        name: "PHP.Watch",
+        url: "https://php.watch/versions/8.5/boolean-double-integer-binary-casts-deprecated",
+      },
+      {
+        name: "PHP RFC",
+        url: "https://wiki.php.net/rfc/deprecations_php_8_5#deprecate_non-standard_cast_names",
+      },
+    ],
+  },
+  {
+    name: "#[NoDiscard] annotation",
+    description:
+      "You can now mark a function with the `#[NoDiscard]` attribute, indicating that its return value must be used. If nothing happens with that return value, a warning will be triggered.",
+    keywords: ["annotations"],
+    added: "8.5",
+    deprecated: null,
+    removed: null,
+    resources: [
+      {
+        name: "PHP Release Announcement",
+        url: "https://www.php.net/releases/8.5/en.php#no-discard-attribute",
+      },
+      {
+        name: "PHP RFC",
+        url: "https://wiki.php.net/rfc/marking_return_value_as_important",
+      },
+    ],
+  },
+  {
     name: "Property Hooks",
     description:
       "Allows object properties to have getter and setter hooks/methods.",
