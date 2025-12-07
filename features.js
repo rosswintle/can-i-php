@@ -1667,8 +1667,8 @@ const features = [
     {
         name: "Password hashing with Argon2",
         description:
-            "Argon2 has been added to the password hashing API  where the following constants have been exposed:<p> <ol><li>PASSWORD_ARGON2I<li>PASSWORD_ARGON2_DEFAULT_MEMORY_COST</li><li>PASSWORD_ARGON2_DEFAULT_TIME_COST</li><li>PASSWORD_ARGON2_DEFAULT_THREADS</li>",
-        keywords: ["password", "argon2"],
+            "Argon2 has been added to the password hashing API</li>",
+        keywords: ["password", "argon2", "security"],
         added: "7.2",
         deprecated: null,
         removed: null,
@@ -1676,14 +1676,18 @@ const features = [
             {
                 name: "Password Hashing API (php.net)",
                 url: "https://www.php.net/manual/en/book.password.php",
-            }
+            },
+            {
+                name: "New features in PHP 7.2 (php.net)",
+                url: "https://www.php.net/manual/en/migration72.new-features.php#migration72.new-features.pws-hashing-with-argon2",
+            },
         ]
     },
     {
         name: "Extended string types for PDO",
         description:
-            "PDO's string type has been extended to support the national character type when emulating prepares. This has been done with the following constants:<ol> <li>PDO::PARAM_STR_NATL</li><li>PDO::PARAM_STR_CHAR</li><li>PDO::ATTR_DEFAULT_STR_PARAM</li></ol>",
-        keywords: ["pdo"],
+            "PDO's string type has been extended to support the national character type when emulating prepares.",
+        keywords: ["pdo", "SQL", "database"],
         added: "7.2",
         deprecated: null,
         removed: null,
@@ -1692,13 +1696,17 @@ const features = [
                 name: "PHP Data Objects (php.net)",
                 url: "https://www.php.net/manual/en/book.pdo.php",
             },
+            {
+                name: "New features in PHP 7.2 (php.net)",
+                url: "https://www.php.net/manual/en/migration72.new-features.php#migration72.new-features.pdo-extended-str-types",
+            },
         ],
     },
     {
         name: "PDOStatement::debugDumpParams method updated to include SQL sent",
         description:
             "The PDOStatement::debugDumpParams() method has been updated to include the SQL being sent to the DB, where the full, raw query (including the replaced placeholders with their bounded values) will be shown. This has been added to aid with debugging emulated prepares.",
-        keywords: ["pdo"],
+        keywords: ["pdo", "SQL", "database", "debugging"],
         added: "7.2",
         deprecated: null,
         removed: null,
@@ -1711,8 +1719,8 @@ const features = [
     },
     {
         name: "Unquoted strings",
-        description: " Unquoted strings that are non-existent global constants are taken to be strings of themselves. This behaviour used to emit an E_NOTICE, but will now emit an E_WARNING. In the next major version of PHP, an Error exception will be thrown instead.",
-        keywords: ["functions", "deprecated", "removed"],
+        description: "Unquoted strings that are non-existent global constants are taken to be strings of themselves. This behaviour used to emit an `E_NOTICE`, but will now emit an `E_WARNING`. In the next major version of PHP, an Error exception will be thrown instead.",
+        keywords: ["strings", "deprecated", "removed"],
         added: "0.0",
         deprecated: "7.2",
         removed: "8.0",
@@ -1726,8 +1734,8 @@ const features = [
     {
         name: "png2wbmp",
         description: "png2wbmp — Convert PNG image file to WBMP image file",
-        keywords: ["functions", "deprecated", "removed"],
-        added: "0.0",
+        keywords: ["functions", "deprecated", "removed", "images", "conversion"],
+        added: "4.0.5",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1740,8 +1748,8 @@ const features = [
     {
         name: "jpeg2wbmp",
         description: "jpeg2wbmp — Convert JPEG image file to WBMP image file",
-        keywords: ["functions", "deprecated", "removed"],
-        added: "0.0",
+        keywords: ["functions", "deprecated", "removed", "images", "conversion"],
+        added: "4.0.5",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1754,7 +1762,7 @@ const features = [
     {
         name: "INTL_IDNA_VARIANT_2003 variant",
         description: "The Intl extension has deprecated the INTL_IDNA_VARIANT_2003 variant, which is currently being used as the default for idn_to_ascii() and idn_to_utf8().",
-        keywords: ["functions", "deprecated", "removed", "idn_to_ascii", "idn_to_utf8"],
+        keywords: ["constants", "deprecated", "removed", "ascii", "utf8", "internationalization", "localization", "i18n"],
         added: "0.0",
         deprecated: "7.2",
         removed: "8.0",
@@ -1768,8 +1776,8 @@ const features = [
     {
         name: "__autoload function",
         description: "The __autoload() method has been deprecated because it is inferior to spl_autoload_register() (due to it not being able to chain autoloaders), and there is no interoperability between the two autoloading styles.",
-        keywords: ["functions", "deprecated", "removed", "__autoload", "spl_autoload_register"],
-        added: "0.0",
+        keywords: ["functions", "deprecated", "removed", "autoload"],
+        added: "5.0",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1781,8 +1789,8 @@ const features = [
     },
     {
         name: "track_errors ini setting and $php_errormsg variable",
-        description: "When the track_errors ini setting is enabled, a $php_errormsg variable is created in the local scope when a non-fatal error occurs. Given that the preferred way of retrieving such error information is by using error_get_last(), this feature has been deprecated.",
-        keywords: ["functions", "deprecated", "removed", "track_errors", "php_errormsg"],
+        description: "When the `track_errors` ini setting is enabled, a `$php_errormsg` variable is created in the local scope when a non-fatal error occurs. Given that the preferred way of retrieving such error information is by using `error_get_last()`, this feature has been deprecated.",
+        keywords: ["settings", "deprecated", "removed", "php_errormsg"],
         added: "0.0",
         deprecated: "7.2",
         removed: "8.0",
@@ -1796,8 +1804,8 @@ const features = [
     {
         name: "create_function function",
         description: "Given the security issues of this function (being a thin wrapper around eval()), this dated function has now been deprecated. The preferred alternative is to use anonymous functions.",
-        keywords: ["functions", "deprecated", "removed", "create_function", "eval"],
-        added: "0.0",
+        keywords: ["functions", "deprecated", "removed", "eval"],
+        added: "4.0.1",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1810,7 +1818,7 @@ const features = [
     {
         name: "mbstring.func_overload ini setting",
         description: "Given the interoperability problems of string-based functions being used in environments with this setting enabled, it has now been deprecated.",
-        keywords: ["functions", "deprecated", "removed", "mbstring"],
+        keywords: ["settings", "deprecated", "removed", "mbstring"],
         added: "0.0",
         deprecated: "7.2",
         removed: "8.0",
@@ -1822,9 +1830,9 @@ const features = [
         ],
     },
     {
-        name: "(uncast) cast",
-        description: "Casting any expression to this type will always result in null, and so this superfluous casting type has now been deprecated.",
-        keywords: ["functions", "deprecated", "removed", "uncast"],
+        name: "(unset) cast",
+        description: "Casting any expression to this type will always result in `null`, and so this superfluous casting type has now been deprecated.",
+        keywords: ["types", "deprecated", "removed", "casting"],
         added: "0.0",
         deprecated: "7.2",
         removed: "8.0",
@@ -1837,9 +1845,9 @@ const features = [
     },
     {
         name: "parse_str() without a second argument",
-        description: "Without the second argument to parse_str(), the query string parameters would populate the local symbol table. Given the security implications of this, using parse_str() without a second argument has now been deprecated. The function should always be used with two arguments, as the second argument causes the query string to be parsed into an array.",
-        keywords: ["functions", "deprecated", "removed", "parse_str"],
-        added: "0.0",
+        description: "Without the second argument to `parse_str()`, the query string parameters would populate the local symbol table. Given the security implications of this, using `parse_str()` without a second argument has now been deprecated. The function should always be used with two arguments, as the second argument causes the query string to be parsed into an array.",
+        keywords: ["functions", "deprecated", "removed", "strings"],
+        added: "4.0",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1856,8 +1864,8 @@ const features = [
     {
         name: "gmp_random() function",
         description: "This function generates a random number based upon a range that is calculated by an unexposed, platform-specific limb size. Because of this, the function has now been deprecated. The preferred way of generating a random number using the GMP extension is by gmp_random_bits() and gmp_random_range().",
-        keywords: ["functions", "deprecated", "removed", "gmp_random", "gmp_random_bits", "gmp_random_range"],
-        added: "0.0",
+        keywords: ["functions", "deprecated", "removed"],
+        added: "4.0.4",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1874,8 +1882,8 @@ const features = [
     {
         name: "each() function",
         description: "This function is far slower at iteration than a normal foreach, and causes implementation issues for some language changes. It has therefore been deprecated.",
-        keywords: ["functions", "deprecated", "removed", "each"],
-        added: "0.0",
+        keywords: ["functions", "deprecated", "removed", "arrays", "loops", "iteration"],
+        added: "4.0",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1887,9 +1895,9 @@ const features = [
     },
     {
         name: "assert() with a string argument",
-        description: "Using assert() with a string argument required the string to be eval()'ed. Given the potential for remote code execution, using assert() with a string argument has now been deprecated in favour of using boolean expressions.",
-        keywords: ["functions", "deprecated", "removed", "assert"],
-        added: "0.0",
+        description: "Using assert() with a string argument required the string to be eval()'ed. Given the potential for remote code execution, using `assert()` with a string argument has now been deprecated in favour of using boolean expressions.",
+        keywords: ["functions", "deprecated", "removed", "strings"],
+        added: "4.0",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
@@ -1902,7 +1910,7 @@ const features = [
     {
         name: "$errcontext argument of error handlers",
         description: "The $errcontext argument contains all local variables of the error site. Given its rare usage, and the problems it causes with internal optimisations, it has now been deprecated. Instead, a debugger should be used to retrieve information on local variables at the error site.",
-        keywords: ["functions", "deprecated", "removed", "assert"],
+        keywords: ["errors", "deprecated", "removed"],
         added: "0.0",
         deprecated: "7.2",
         removed: "8.0",
@@ -1915,9 +1923,9 @@ const features = [
     },
     {
         name: "read_exif_data() function",
-        description: "The read_exif_data() alias has been deprecated. The exif_read_data() function should be used instead.",
-        keywords: ["functions", "deprecated", "removed", "read_exif_data", "exif_read_data"],
-        added: "0.0",
+        description: "The `read_exif_data()` alias has been deprecated. The `exif_read_data()` function should be used instead.",
+        keywords: ["functions", "deprecated", "removed", "images"],
+        added: "4.0.1",
         deprecated: "7.2",
         removed: "8.0",
         resources: [
